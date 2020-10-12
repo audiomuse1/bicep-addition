@@ -1,0 +1,885 @@
+{
+    "wd966fb4ji": {
+        "hash": "wd966fb4ji",
+        "name": "314 Action",
+        "prefix": "ACTI",
+        "x-auth-client": "oyqc92wu3ha82fbxa7bdrw6u1r298mu",
+        "x-auth-token": "fmsxxy3gw4uhi5uf8ga9sboedi4inl6"
+    },
+    "mf94x92nj6": {
+        "hash": "mf94x92nj6",
+        "name": "Adrian Perkins for Senate",
+        "prefix": "PERK",
+        "x-auth-client": "7h9tcnax58cqywiq6yvnafkcpn0wcum",
+        "x-auth-token": "sfw4gn0s9xv2lghs4gogdqflmvo7lof"
+    },
+    "79kkqhqegk": {
+        "hash": "79kkqhqegk",
+        "name": "Alan Khazei for Congress",
+        "prefix": "KHAZ",
+        "x-auth-client": "ipfhj00c7zuogdkepulgxxlpd0tsup0",
+        "x-auth-token": "7i8qnt3wl05h5jx1obsrbfzyes2ygq"
+    },
+    "83k00f0idr": {
+        "hash": "83k00f0idr",
+        "name": "Alaska Democratic Party",
+        "prefix": "AKDP",
+        "x-auth-client": "qb70tn8g2ceooxycbd751rdt4nnrqgt",
+        "x-auth-token": "hoee86mhssor3eoeekd2vhf84xy5hex"
+    },
+    "eql5x7tirm": {
+        "hash": "eql5x7tirm",
+        "name": "Alyse Galvin for Congress",
+        "prefix": "GALV",
+        "x-auth-client": "5yngcpj78thyq1rhv02sf6xxe1qy7v3",
+        "x-auth-token": "i6htf1sv87t8esne3q31p9wbwato6zj"
+    },
+    "ee44fj008d": {
+        "hash": "ee44fj008d",
+        "name": "Amy McGrath for Senate",
+        "prefix": "MCGR",
+        "x-auth-client": "gq6iy7mjhklf628auns4ieo9hf5um7e",
+        "x-auth-token": "3wxmvv2zs1u45xvm8ywnsws5v01nu1m"
+    },
+    "g6qxrw6yc": {
+        "hash": "g6qxrw6yc",
+        "name": "Angie Craig for Congress",
+        "prefix": "ANGI",
+        "x-auth-client": "gtkgvdz37srygjxkhxidf0jt5t2tefs",
+        "x-auth-token": "ignk1emdehu6wlwjd7grq80k9heg0kk"
+    },
+    "pnxxnl4fpe": {
+        "hash": "pnxxnl4fpe",
+        "name": "Antoine Pierce for U.S. Senate",
+        "prefix": "PIER",
+        "x-auth-client": "97pbfi8pg026hnz370zkbucf13xfx7c",
+        "x-auth-token": "82iq6yxtawcdx8ymrbyfcrdn66o9hlu"
+    },
+    "r2a3o6hofx": {
+        "hash": "r2a3o6hofx",
+        "name": "Arizona Democratic Party",
+        "prefix": "AZDP",
+        "x-auth-client": "8w0bknmro1ms3y3wl1uy3vuyhjcj17g",
+        "x-auth-token": "to1a52s1ftevdonbh14rlqi4v4gebe7"
+    },
+    "1reea67a2b": {
+        "hash": "1reea67a2b",
+        "name": "Arkansas Democratic Party",
+        "prefix": "ARKD",
+        "x-auth-client": "kh9if4szqskrz29l0vvozah5dkhe09f",
+        "x-auth-token": "mp2j1bdsze6ra85o2s040ten3x4bsnv"
+    },
+    "5928ye2l7q": {
+        "hash": "5928ye2l7q",
+        "name": "Barbara Bollier for US Senate",
+        "prefix": "BOLL",
+        "x-auth-client": "38kgpyrn259ehllj6i2kj0xw60yculj",
+        "x-auth-token": "2deg0dlt4mqpek2466ei4yo8xgotr9v"
+    },
+    "rmpktc1rrr": {
+        "hash": "rmpktc1rrr",
+        "name": "Beat Abbott PAC",
+        "prefix": "BEAB",
+        "x-auth-client": "bkhyhx8uqfqui3ktz0j5bx4e235knb8",
+        "x-auth-token": "lmvrq93npzjk47w2y5m1c5fc2kxtfl7"
+    },
+    "aun5zajpk7": {
+        "hash": "aun5zajpk7",
+        "name": "Betsy Sweet for US Senate",
+        "prefix": "SWEE",
+        "x-auth-client": "27h4gnkh9xx9yxldnj2wisx4el8x92m",
+        "x-auth-token": "it1b5nya7z6w0bil94zjp1pudjl70t4"
+    },
+    "xaoxq52p2p": {
+        "hash": "xaoxq52p2p",
+        "name": "Bexar County Democratic Party",
+        "prefix": "BEXR",
+        "x-auth-client": "2209qnyd6gjczw8n7wk1gy8yuhnlhke",
+        "x-auth-token": "4896o09prukp57ejy1w2ycl8u4jaeox"
+    },
+    "cge8g9rqv1": {
+        "hash": "cge8g9rqv1",
+        "name": "CADEMStore",
+        "prefix": "CADP",
+        "x-auth-client": "rrxl2xxt836c0i9sp453edwkrpna0ft",
+        "x-auth-token": "ns06sog4i40heq8gr4i8va38mloa36b"
+    },
+    "tmngokktf8": {
+        "hash": "tmngokktf8",
+        "name": "Cal Cunningham for US Senate",
+        "prefix": "CALC",
+        "x-auth-client": "16fe5lm5lt6bv0xhzlszrd4hvxzxxcv",
+        "x-auth-token": "e68r4ehr30ejil3u4kqwrce7anigj8l"
+    },
+    "mdvbbf1di3": {
+        "hash": "mdvbbf1di3",
+        "name": "Candace Valenzuela for Congress",
+        "prefix": "VALE",
+        "x-auth-client": "2dgj32jmtmpaq1zvcpqk6z1klu2g11b",
+        "x-auth-token": "e38kswpkg6ug3zw7y1bsnt4tzp8j67w"
+    },
+    "ev5s7q37lx": {
+        "hash": "ev5s7q37lx",
+        "name": "Carolyn Long for Congress",
+        "prefix": "LONG",
+        "x-auth-client": "nn3kzgbtpoj7mzntc0u80ir9rse64c7",
+        "x-auth-token": "43lzawa5d97hzuuo5rlh0w8dl67dcnk"
+    },
+    "i6qdtigo7f": {
+        "hash": "i6qdtigo7f",
+        "name": "Castro for Congress",
+        "prefix": "JOAQ",
+        "x-auth-client": "41kmyam6n42c9ncorx3qoc5xnyjrda6",
+        "x-auth-token": "aomgubfvkesyg8n3tuci5zw6fco9oo2"
+    },
+    "ikixzffbi3": {
+        "hash": "ikixzffbi3",
+        "name": "Chris Bubser for Congress",
+        "prefix": "BUBS",
+        "x-auth-client": "kd0314lzo4e00tc5k6zg173oxnzkc3",
+        "x-auth-token": "9mgmaeirr5rz9fzean96fyg1ndzzkot"
+    },
+    "nn9zhvnb5a": {
+        "hash": "nn9zhvnb5a",
+        "name": "Chrysta Castañeda for Railroad Commissioner",
+        "prefix": "CAST",
+        "x-auth-client": "tkwpzfa37eywr3qj4z7buqg9wjq73xg",
+        "x-auth-token": "9of0za323qu5yb6zdtp57u6bntucpdu"
+    },
+    "37jtrtr30h": {
+        "hash": "37jtrtr30h",
+        "name": "Cisneros for Congress",
+        "prefix": "CISN",
+        "x-auth-client": "lt804wofsp9qtdx898go0x7foff4lte",
+        "x-auth-token": "qmmr2igm7qd6v28abdaka2qhpvti31d"
+    },
+    "wtrkyejblm": {
+        "hash": "wtrkyejblm",
+        "name": "Colorado Democratic Party",
+        "prefix": "CODP",
+        "x-auth-client": "sepw5ov04sim6ydfufmxh18xglgnks9",
+        "x-auth-token": "27un3v4sr1sio8q1y5npa05vy9cb2y0"
+    },
+    "mzrdrewkqt": {
+        "hash": "mzrdrewkqt",
+        "name": "Cory Booker for Senate",
+        "prefix": "COBO",
+        "x-auth-client": "rjt5v50eyfbtby4pk7p73a024mwacaw",
+        "x-auth-token": "7njbq724bm2z1guwhkezab4xk67owwm"
+    },
+    "q3rxgl9q6i": {
+        "hash": "q3rxgl9q6i",
+        "name": "Connecticut Democratic Party",
+        "prefix": "CTDP",
+        "x-auth-client": "jrb5wvqil41bipb940fpdoxc533r5yd",
+        "x-auth-token": "ph4nhbck8gdtt5exalg0nr8u6b1qj9g"
+    },
+    "ksyz6fmvi3": {
+        "hash": "ksyz6fmvi3",
+        "name": "Dallas County Democratic Party",
+        "prefix": "DALL",
+        "x-auth-client": "r2mgfo6stymk55n11vhb5pc74ufcurz",
+        "x-auth-token": "nk53kkn1kbsad23kuerkak4g37l4m5z"
+    },
+    "18ss28ty1e": {
+        "hash": "18ss28ty1e",
+        "name": "Deb Haaland for Congress",
+        "prefix": "HAAL",
+        "x-auth-client": "fh2nya3kdu0ei7i0kx135cesfow2t3",
+        "x-auth-token": "qqms0wbwwt84jiz6v5ebrhy3ehsxvnx"
+    },
+    "ut91ktrxvp": {
+        "hash": "ut91ktrxvp",
+        "name": "Delaware Democratic Party",
+        "prefix": "DEDP",
+        "x-auth-client": "6tet0p4yfi8spd4vqxl9d8111o5gvq4",
+        "x-auth-token": "7at45rlv45fxpw2fmizbzbfqluw26vv"
+    },
+    "26yp13dau9": {
+        "hash": "26yp13dau9",
+        "name": "Democratic Party of Georgia",
+        "prefix": "GADP",
+        "x-auth-client": "mlpf4cby31mjj887vmftud0fyye4wu8",
+        "x-auth-token": "jvdpwzz3yofcfs92o1mk8lu8bjbtde3"
+    },
+    "1hpf1yjse1": {
+        "hash": "1hpf1yjse1",
+        "name": "Democratic Party of Oregon",
+        "prefix": "ORDP",
+        "x-auth-client": "nhaq98tniyyyjicnqag8s3yukcpge4c",
+        "x-auth-token": "mxou5opvjin7mfjwe9wf4n6i4igey9a"
+    },
+    "2ajw31kfsw": {
+        "hash": "2ajw31kfsw",
+        "name": "Democratic Party of Virginia",
+        "prefix": "VADP",
+        "x-auth-client": "6h4corlybtnbww1dil4yarvgmgcbzbd",
+        "x-auth-token": "cj5uq2wxnxm6ly9ghp1b98xsj7vcmg8"
+    },
+    "1ps8lrnxkg": {
+        "hash": "1ps8lrnxkg",
+        "name": "Democratic Party of Wisconsin",
+        "prefix": "WISC",
+        "x-auth-client": "18m8xmgryyhuziudb980kdr0bsjz5yi",
+        "x-auth-token": "1ffecob2b1edzgxzkbpsdbolcjhqit4"
+    },
+    "8sy323uu73": {
+        "hash": "8sy323uu73",
+        "name": "Dick Durbin - US Senator",
+        "prefix": "DURB",
+        "x-auth-client": "demir0sx8oap0wuu7xuueltg5azzg3t",
+        "x-auth-token": "hxe780hm0bm5wuwxm9wglsquuq35c3g"
+    },
+    "ukbp6yjils": {
+        "hash": "ukbp6yjils",
+        "name": "DLCC",
+        "prefix": "DLCC",
+        "x-auth-client": "fgizvt5qsegbonvaysgzaupiosj7bq4",
+        "x-auth-token": "4ucqfhlwssz9q730hf81x3l8ir10by"
+    },
+    "8chgzj1rpg": {
+        "hash": "8chgzj1rpg",
+        "name": "Donna Shalala for Congress",
+        "prefix": "SHAL",
+        "x-auth-client": "fn1atf75pcz4yjbmpj7twmk4386zr3u",
+        "x-auth-token": "7vj96th3vdyhkr60e8c4t8vjjky7j2n"
+    },
+    "1bta6rpfq0": {
+        "hash": "1bta6rpfq0",
+        "name": "Doug Jones for Senate",
+        "prefix": "DOUG",
+        "x-auth-client": "j0nfbkbf81ihmmjhzkfjodvsclpgyrl",
+        "x-auth-token": "hnnu6yje1weaeqxnvox0ku8ez6mzgoo"
+    },
+    "yc5ppnqoal": {
+        "hash": "yc5ppnqoal",
+        "name": "Dr. Al Gross for U.S. Senate",
+        "prefix": "GROS",
+        "x-auth-client": "agiux6b4szmmnzgod3yod1gu8cdvi90",
+        "x-auth-token": "cvv8vuqjjc82pfri81x3g5od02ljuz"
+    },
+    "vhkxajzcff": {
+        "hash": "vhkxajzcff",
+        "name": "Ed Markey for US Senate",
+        "prefix": "MARK",
+        "x-auth-client": "ajsfo2kr6r1keu218czlghtjpnfyfud",
+        "x-auth-token": "lr5335t0674vaofrix17zny3wendtom"
+    },
+    "ui1wp79xgk": {
+        "hash": "ui1wp79xgk",
+        "name": "Elaine Luria for Congress",
+        "prefix": "LURI",
+        "x-auth-client": "p9veu42ddva1b3um6wfibl51dm41b71",
+        "x-auth-token": "5z0wh2vn6etzlh2isgv5v295u91hc83"
+    },
+    "5eyq7h13ho": {
+        "hash": "5eyq7h13ho",
+        "name": "EqualCitizens",
+        "prefix": "EQLC",
+        "x-auth-client": "f14kgku6hqelk9vlwm4y8rt9ebto5mj",
+        "x-auth-token": "kbd0l37wvyeaihcubtqtx3t8j16gtif"
+    },
+    "16hfmhz52c": {
+        "hash": "16hfmhz52c",
+        "name": "Fire Mitch",
+        "prefix": "FIMI",
+        "x-auth-client": "u3bh5t374kdztw6s8jb1ljzqbly3q",
+        "x-auth-token": "qvs9gr6hsxr8tecb2jcwkob861oi919"
+    },
+    "p1yrotx54o": {
+        "hash": "p1yrotx54o",
+        "name": "Florida Democratic Party",
+        "prefix": "FLDP",
+        "x-auth-client": "r4yf1n99xo8gtu0e3ngj3mysjxe7baj",
+        "x-auth-token": "5hl8lm95emyk108e77arhyaoio7cwwh"
+    },
+    "q2713hcgx4": {
+        "hash": "q2713hcgx4",
+        "name": "Frank Mrvan for Congress",
+        "prefix": "MRVA",
+        "x-auth-client": "5okqig9i0bjli6h9c2rk2rderpyishp",
+        "x-auth-token": "6gb17eubuak5wgrfti8p5buueuwtjd9"
+    },
+    "sqxiktn7ao": {
+        "hash": "sqxiktn7ao",
+        "name": "Gary Peters for Senate",
+        "prefix": "GARY",
+        "x-auth-client": "8i1lvrasoqz5e4gntjae8q86er7bfge",
+        "x-auth-token": "azb50np88p10me5lwwgne3fao4for96"
+    },
+    "d0i0ox8ulf": {
+        "hash": "d0i0ox8ulf",
+        "name": "George Gascón for LA DA",
+        "prefix": "GASC",
+        "x-auth-client": "lh5xqzr0ojd8hgwfiv3tjyk5jc3m6h2",
+        "x-auth-token": "3lw8anpkb2fahjg6mkc06kj97z9lsah"
+    },
+    "47rwrpxyzt": {
+        "hash": "47rwrpxyzt",
+        "name": "Gina Ortiz Jones",
+        "prefix": "GIOJ",
+        "x-auth-client": "46ju3iyo628j6wj04tvbv3hnzx20p03",
+        "x-auth-token": "bac8hdsxvmuq5blb4ngz5ix9p4p4vo2"
+    },
+    "kbn8lr81m6": {
+        "hash": "kbn8lr81m6",
+        "name": "Hank Gilbert for Congress",
+        "prefix": "HANK",
+        "x-auth-client": "fv9j1lmuyakbt9xomon6qigvn15hmtm",
+        "x-auth-token": "p934yygsx0k1bt6pbsqgel349kp3xdm"
+    },
+    "af9e0u6gbg": {
+        "hash": "af9e0u6gbg",
+        "name": "Hawaii Democratic Party",
+        "prefix": "HID",
+        "x-auth-client": "llxow4t7eaf1r5awbd2u6isd0b6z45c",
+        "x-auth-token": "7py6obip86ei2ivc1ctpuu08cm03ezn"
+    },
+    "vjz3bjbuom": {
+        "hash": "vjz3bjbuom",
+        "name": "Hillary O'Connor Mueri for Congress",
+        "prefix": "MUER",
+        "x-auth-client": "fi8j9ehfodof1uyg7dsg15m34cwe1ls",
+        "x-auth-token": "12hxr73ltjrezm41nqwsyrp9m4olkj"
+    },
+    "xzmp05i3vu": {
+        "hash": "xzmp05i3vu",
+        "name": "Hillary Scholten for Congress",
+        "prefix": "SCHO",
+        "x-auth-client": "dnxkthcfevmru881i735gmwwim3omrb",
+        "x-auth-token": "8czq5vyf5yjud6ydh777hp9mil14k2u"
+    },
+    "3gjgb9sveq": {
+        "hash": "3gjgb9sveq",
+        "name": "Idaho Democratic Party",
+        "prefix": "IDD",
+        "x-auth-client": "1nfzufa3490kkuxlwvy6kr7spo5pt9s",
+        "x-auth-token": "c4yncnmjye06565o6m00yekexdf6fq6"
+    },
+    "knzedf5pzm": {
+        "hash": "knzedf5pzm",
+        "name": "IDCCA",
+        "prefix": "IDCC",
+        "x-auth-client": "yzhfbjcfkytelrjlz6124ajtpidvcc",
+        "x-auth-token": "riw9w2hlf3alx8j774dzdhl0h2dcvk2"
+    },
+    "hu3r5jmxg7": {
+        "hash": "hu3r5jmxg7",
+        "name": "Ilhan for Congress",
+        "prefix": "OMAR",
+        "x-auth-client": "iexwa5qsg4ji8w7c787eg39xyg9u8oi",
+        "x-auth-token": "13szvukkuou65yj72cxo1rbuuvjyxtj"
+    },
+    "2y28wj3sxb": {
+        "hash": "2y28wj3sxb",
+        "name": "Indiana Democratic Party",
+        "prefix": "INDM",
+        "x-auth-client": "g5ar7h323tfwlibnmcn5aeunhldcuo",
+        "x-auth-token": "jnll9svkthdk3wm354zjfuuhuyf4ovz"
+    },
+    "69xapbdjme": {
+        "hash": "69xapbdjme",
+        "name": "Indivisible",
+        "prefix": "INDIV",
+        "x-auth-client": "ox4p81ryd13pgusah59dzsg3pgo0sa4",
+        "x-auth-token": "j9q1dvztjtmbz8a6eo66sec6iwmg2rz"
+    },
+    "b65i8l6i3p": {
+        "hash": "b65i8l6i3p",
+        "name": "Jaime Harrison for US Senate",
+        "prefix": "JHAR",
+        "x-auth-client": "28bysbe4nn6a8e8aehoi0sa3ao3lcha",
+        "x-auth-token": "7bockuiqsx1f8pgm6a0xzd2uzcmu2ci"
+    },
+    "3fvvu9vxhj": {
+        "hash": "3fvvu9vxhj",
+        "name": "Jay Inslee for Governor",
+        "prefix": "INSL",
+        "x-auth-client": "48dgozuiga6hykqld6l5zt3098fxr04",
+        "x-auth-token": "k8v9a5czd2lewvrukb7up5oiet94zxm"
+    },
+    "i4y75s8v87": {
+        "hash": "i4y75s8v87",
+        "name": "Jeanne Shaheen for US Senate",
+        "prefix": "JEAN",
+        "x-auth-client": "mq7ejftxk53hz05naf97t2nivqjl1zz",
+        "x-auth-token": "i4vza81vqhxi5fbaukr9mpcykujldq0"
+    },
+    "20xdfs2t55": {
+        "hash": "20xdfs2t55",
+        "name": "Jeff Merkley for Oregon",
+        "prefix": "MERK",
+        "x-auth-client": "2njm3pzeadg31ju2byzn9cy83cr2xt9",
+        "x-auth-token": "tr3qetfep7r9j6qdd0o3ihlaiirt0h5"
+    },
+    "xwoxcqktet": {
+        "hash": "xwoxcqktet",
+        "name": "Jennifer Caroll Foy for Governor",
+        "prefix": "JCFO",
+        "x-auth-client": "m3l5nmpz95ujqfww3mg0x62132zmtfs",
+        "x-auth-token": "42jxjneycgmtsm17wjkfijeeog3z4ky"
+    },
+    "i1frboa2p0": {
+        "hash": "i1frboa2p0",
+        "name": "Jessica Tiedt for State House",
+        "prefix": "TIED",
+        "x-auth-client": "r0egk4dx1r1yrwsep6tewfdbls1qbod",
+        "x-auth-token": "ts8w1t9inei2c53yqxa99x0bx6un6wd"
+    },
+    "s49a531hmq": {
+        "hash": "s49a531hmq",
+        "name": "Jevin Hodge for Maricopa County Board of Supervisors",
+        "prefix": "HODG",
+        "x-auth-client": "gib8ytc5e6t2urvgpnfafweed00c4p0",
+        "x-auth-token": "f1wfhxquy5fxgsnn96cje6eliwmxajn"
+    },
+    "tocq0kz1do": {
+        "hash": "tocq0kz1do",
+        "name": "Jim Clyburn for U.S. Congress",
+        "prefix": "CLYB",
+        "x-auth-client": "lthfpkp6ja9j5yiwo9pzfy6l8s05cz3",
+        "x-auth-token": "rohgpzjcf8b3rwzpkkzjgu59aqbi64m"
+    },
+    "97l9cdioo0": {
+        "hash": "97l9cdioo0",
+        "name": "Jon Hoadley for Congress",
+        "prefix": "HOAD",
+        "x-auth-client": "i7cwi801fy7ayzdc7x1e27xl6f7fh0p",
+        "x-auth-token": "m3nbz3nxc7wj0vwijssc8f1nho0if2f"
+    },
+    "uiyjc8gk7f": {
+        "hash": "uiyjc8gk7f",
+        "name": "Josh Hicks for Congress",
+        "prefix": "JOSH",
+        "x-auth-client": "33bvwtnk557i842b2twakx6tskbf5w0",
+        "x-auth-token": "5nt0jvcgcyw4r2qfing6varud607ys9"
+    },
+    "vejkiyel8p": {
+        "hash": "vejkiyel8p",
+        "name": "Josh Stein for Attorney General",
+        "prefix": "STEI",
+        "x-auth-client": "hxy4kkkb4bgo3h70fovezdti4mciohy",
+        "x-auth-token": "1jw4aw6sdtxc3vqyyf8nmejcp101wgn"
+    },
+    "priafxj93c": {
+        "hash": "priafxj93c",
+        "name": "Julie Oliver for Congress",
+        "prefix": "JULI",
+        "x-auth-client": "r3frk0ja32qw3sfo1njrnzhila1pu7k",
+        "x-auth-token": "flytdnjjxuusotfy43dwsdb6cuonyrv"
+    },
+    "ceqbmj7ejn": {
+        "hash": "ceqbmj7ejn",
+        "name": "Kahele for Congress",
+        "prefix": "KAHE",
+        "x-auth-client": "2uz4ixmch29tz5jn36aa3bm99f1ufnc",
+        "x-auth-token": "ox3c3e6r0j7ixpxzdygz1p9x2ob7mli"
+    },
+    "d663mdco91": {
+        "hash": "d663mdco91",
+        "name": "Kansas Democratic Party",
+        "prefix": "KSDP",
+        "x-auth-client": "8nohxzztxwis299im1soluo2qxt7ya1",
+        "x-auth-token": "nqqwpqe04sv3j4jq4f1bu7g3kddw2g1"
+    },
+    "hhvvivrfi": {
+        "hash": "hhvvivrfi",
+        "name": "Kentucky Democratic Party",
+        "prefix": "KYDP",
+        "x-auth-client": "21e3chguq96xcz52ukvan8ml1kxakq2",
+        "x-auth-token": "a8x1erk13t6yilfarou2jnuv4pltp5t"
+    },
+    "m4x5t87zfi": {
+        "hash": "m4x5t87zfi",
+        "name": "Louisiana Democratic Party",
+        "prefix": "LADP",
+        "x-auth-client": "ig8sk1ti8tov5uzzas3oh6p0lbwy31",
+        "x-auth-token": "lj5gsj1l9dxqgb6zohro3jahefuzh0h"
+    },
+    "eq35o139xi": {
+        "hash": "eq35o139xi",
+        "name": "Maine Democratic Party",
+        "prefix": "MEDP",
+        "x-auth-client": "ghh78u9oo0h3gxwj8cwcjjkdwly7e7m",
+        "x-auth-token": "bsy7z27wi8zuenw81agy9a28tqml6qf"
+    },
+    "59o3xvxj05": {
+        "hash": "59o3xvxj05",
+        "name": "Maloney for Congress",
+        "prefix": "CARO",
+        "x-auth-client": "m6lm005ckcenz9fsr2djv6bm9w5qxvu",
+        "x-auth-token": "hkcxw5gvv0zw0dbhgtmevmrfb3axy2u"
+    },
+    "xjfhksjl9b": {
+        "hash": "xjfhksjl9b",
+        "name": "Mark Kelly for Senate",
+        "prefix": "KELL",
+        "x-auth-client": "t5izo866skuc0ilag9dmnens12lxk8h",
+        "x-auth-token": "e1coy1igw1ky1vcwone9i7avz1p0olm"
+    },
+    "p1nhpo01yp": {
+        "hash": "p1nhpo01yp",
+        "name": "Mark Warner for Virginia",
+        "prefix": "WARN",
+        "x-auth-client": "n2useuqlil9ycp50iirkmwrvkug1bsr",
+        "x-auth-token": "qq7ygg1219ouqcp1ckrttq7i4ut5n38"
+    },
+    "tyjzf1amri": {
+        "hash": "tyjzf1amri",
+        "name": "Michigan Democratic Party",
+        "prefix": "MID",
+        "x-auth-client": "39nvv52vzqhv62thaxzijd3zt5diz84",
+        "x-auth-token": "bnxussmip28kw8u98prt7ocesjq35bx"
+    },
+    "3u97273rf5": {
+        "hash": "3u97273rf5",
+        "name": "Mike Espy for Senate",
+        "prefix": "ESPY",
+        "x-auth-client": "6e8wf7acqkkvm5nhsluvmglohufjoqw",
+        "x-auth-token": "jhgdeaqwqjn9xbhemvz8605k3gzfd8a"
+    },
+    "992f9au5nl": {
+        "hash": "992f9au5nl",
+        "name": "Mike Siegel for Congress",
+        "prefix": "SIGL",
+        "x-auth-client": "l5xlv8kkt496eiup44jwwgliujw4q3b",
+        "x-auth-token": "906yjibvrka4hrrg9bky0plokztwty0"
+    },
+    "n9j0hkaf56": {
+        "hash": "n9j0hkaf56",
+        "name": "Minnesota DFL",
+        "prefix": "MNDP",
+        "x-auth-client": "dxcb4cpo7o017kltp3cnvihm33rwhsz",
+        "x-auth-token": "ibwjty1w7f8jmtukvqr5v305i060dq"
+    },
+    "d3ueatlvhg": {
+        "hash": "d3ueatlvhg",
+        "name": "Mississippi Democratic Party",
+        "prefix": "MSDP",
+        "x-auth-client": "9uo3wg4y93wrh4e1quh9spw9hyf2imf",
+        "x-auth-token": "7ols4uff2a4s50ap1hy607c5ko80o2"
+    },
+    "r85oi3upua": {
+        "hash": "r85oi3upua",
+        "name": "Missouri Democratic Party",
+        "prefix": "MODP",
+        "x-auth-client": "r0bp2biyf02c8xasri6k5uwvd0xq9ii",
+        "x-auth-token": "g83dxz7p7rmjfjdpuctw2tbqyyg31r1"
+    },
+    "nswie9qdj": {
+        "hash": "nswie9qdj",
+        "name": "MJ Hegar for Texas",
+        "prefix": "HEGR",
+        "x-auth-client": "hp7xqnr13zl9gsb8nq9juf6r41f4u7i",
+        "x-auth-token": "61u3hny3f8l02eeetmquvo5qon4jc58"
+    },
+    "7rfklj8i61": {
+        "hash": "7rfklj8i61",
+        "name": "NARAL Pro-Choice Texas",
+        "prefix": "NARA",
+        "x-auth-client": "h6nygot04w61q84t4a8umrf0vyxwuk6",
+        "x-auth-token": "c398wpn87geagdwyt4fwlc3zlvrjujn"
+    },
+    "b92lrwex4a": {
+        "hash": "b92lrwex4a",
+        "name": "NDRC",
+        "prefix": "NDRC",
+        "x-auth-client": "o473jjmjt6we3gyxx3a41f8zdma5ozd",
+        "x-auth-token": "2h5bzwdcgdumg5etbr6k73fpdsqzuej"
+    },
+    "wohigx8asl": {
+        "hash": "wohigx8asl",
+        "name": "Nevada State Democratic Party",
+        "prefix": "NVDP",
+        "x-auth-client": "iw80tpuxphmetu75bieqcm7w7lsm4k8",
+        "x-auth-token": "k0wsliz9mb2tdgyy6i30t4zhf70ir9o"
+    },
+    "9xsa2b697b": {
+        "hash": "9xsa2b697b",
+        "name": "New Hampshire Democratic Party",
+        "prefix": "NHDP",
+        "x-auth-client": "bozjg1mldham9itwtxqkkd0aseajk64",
+        "x-auth-token": "p37oe4enr5tbamhxao6075iljfcqhz8"
+    },
+    "mv64sjmqu5": {
+        "hash": "mv64sjmqu5",
+        "name": "Nicole Galloway for Missouri",
+        "prefix": "GALL",
+        "x-auth-client": "rzkludihz2movlyvd09ba01l09a56jm",
+        "x-auth-token": "pq2jeauywir9e5vdpcgt9kshtz47op3"
+    },
+    "os2tug0rjb": {
+        "hash": "os2tug0rjb",
+        "name": "Nikema Williams for SD39",
+        "prefix": "NIWI",
+        "x-auth-client": "jafiekejd55dafpwb5zm60myfvgtg1e",
+        "x-auth-token": "5lrjzyso1i14k3ms89aijagz7qe4rqf"
+    },
+    "dq9msxd6hw": {
+        "hash": "dq9msxd6hw",
+        "name": "North Carolina Democratic Party",
+        "prefix": "NCDP",
+        "x-auth-client": "hg9t95kqdbetffapjx1htvzx47wxksc",
+        "x-auth-token": "sxs0tydh0paqcj0a19ja4e96cb9b1od"
+    },
+    "z24m3slnm7": {
+        "hash": "z24m3slnm7",
+        "name": "North Carolina House Democrats",
+        "prefix": "NCHD",
+        "x-auth-client": "pfzymlp95wgjax35phxk7duftuxb2wj",
+        "x-auth-token": "gdcxldmp5hmslwxkq78nfo8u3xztir1"
+    },
+    "l1h8oiz61l": {
+        "hash": "l1h8oiz61l",
+        "name": "North Dakota Democratic Party-NDL",
+        "prefix": "NDDP",
+        "x-auth-client": "2lc6rs4uvuy1gigw2pl82f8zekpvjnv",
+        "x-auth-token": "9wols83z4gmbkqljzeuy97njdcsw8h4"
+    },
+    "w00qqtb9tf": {
+        "hash": "w00qqtb9tf",
+        "name": "Ohio Democratic Party",
+        "prefix": "OHDP",
+        "x-auth-client": "lg99j83qhh3il8ctetu2hbt0qdbqzw6",
+        "x-auth-token": "378ipi0hz1khf9j3eys5tbk9qvolstc"
+    },
+    "z9f4alxckr": {
+        "hash": "z9f4alxckr",
+        "name": "Oklahoma Democratic Party",
+        "prefix": "OKDP",
+        "x-auth-client": "rvuinctfu1tkpcqfbvsidzpjehdnmne",
+        "x-auth-token": "anra09ns50f1vvv85wf0k0xub8oispp"
+    },
+    "z9rz2gh2ic": {
+        "hash": "z9rz2gh2ic",
+        "name": "Outlaw Dirty Money",
+        "prefix": "ODRM",
+        "x-auth-client": "do3u7i799z8vndogkrq4972mtflbiq4",
+        "x-auth-token": "3wajf6ajt3zndlhve6za4pehf6phjjg"
+    },
+    "x2pae84sf0": {
+        "hash": "x2pae84sf0",
+        "name": "Pat Timmons-Goodson for Congress",
+        "prefix": "PADP",
+        "x-auth-client": "5djmtyahz2r701ai0cipelqd7dqxfrt",
+        "x-auth-token": "n2r1tbriwx0sy6rj11vifdnxagyxzfu"
+    },
+    "je92gr0xh0": {
+        "hash": "je92gr0xh0",
+        "name": "Paula Jean Swearengin for U.S. Senate",
+        "prefix": "SWEA",
+        "x-auth-client": "8hobpqlw9snknc4a26kh942q75ot1vg",
+        "x-auth-token": "2j0enot8c7bu31dc9kar9y65qzuirh7"
+    },
+    "k4dxlono2s": {
+        "hash": "k4dxlono2s",
+        "name": "Pennsylvania Democratic Party",
+        "prefix": "PADP",
+        "x-auth-client": "5pkgm14qsfaahc5636f2b6q05q0nhbt",
+        "x-auth-token": "3wzuysf5c3md55bqmumqo6u6sg0t5yf"
+    },
+    "enaxmp65ka": {
+        "hash": "enaxmp65ka",
+        "name": "People's Party",
+        "prefix": "MPP",
+        "x-auth-client": "9629cov65dnmnw4qvk3jik2aiz5u46s",
+        "x-auth-token": "6f51d4azky56ifm9z0j5gmldqjr1i7a"
+    },
+    "un9o20f07u": {
+        "hash": "un9o20f07u",
+        "name": "Phil Ehr for Congress",
+        "prefix": "EHRR",
+        "x-auth-client": "1ent5xy6jrtquhjd2f2l10d6bafmk4u",
+        "x-auth-token": "2zfyuculi8kujy9usootb122mhdsxj9"
+    },
+    "2faxhx3mvl": {
+        "hash": "2faxhx3mvl",
+        "name": "Progress Texas",
+        "prefix": "PROG",
+        "x-auth-client": "j78lr6ysbxwrvert6hjy7dzc021vac0",
+        "x-auth-token": "co21q3zbmfs4g8hk9vo32vpxubl6fb7"
+    },
+    "saygtx0wri": {
+        "hash": "saygtx0wri",
+        "name": "Pramila Jayapal for Congress",
+        "prefix": "JAYA",
+        "x-auth-client": "q4udemzwbdbb271y04ht8gzszb50jy2",
+        "x-auth-token": "p41vlbjc35xd14yu8i5q8of2niw5f08"
+    },
+    "g2o945hz0z": {
+        "hash": "g2o945hz0z",
+        "name": "Rashida Tlaib for Congress",
+        "prefix": "TLAI",
+        "x-auth-client": "q8pug3uqyo391o1lffmexu3kbbb4ci7",
+        "x-auth-token": "g7klmqhajxu56irz7tar63b1vtv604"
+    },
+    "5vpkbuzd67": {
+        "hash": "5vpkbuzd67",
+        "name": "Renee Hoyos for Congress",
+        "prefix": "Hoyo",
+        "x-auth-client": "jaxdk3thzyq5wwb77mh899arigzpz2",
+        "x-auth-token": "tu955k410taxdbqdn2gbbcfmwukzfgl"
+    },
+    "dhj2m9l8z1": {
+        "hash": "dhj2m9l8z1",
+        "name": "Roy Cooper for North Carolina",
+        "prefix": "COOP",
+        "x-auth-client": "3rk0c48h12rh0jomi6jw6y48p3zsxmc",
+        "x-auth-token": "8wqd0mbyoam387ioo4dzrqpywx1nj13"
+    },
+    "axaec39z7t": {
+        "hash": "axaec39z7t",
+        "name": "Royce West for Senate",
+        "prefix": "ROYC",
+        "x-auth-client": "gvq2dhtz0cf7n03x7wtrr64ke6txo6b",
+        "x-auth-token": "h7ws250vnopzhakyod4vnd47gqx9s1o"
+    },
+    "uii4rnb7uh": {
+        "hash": "uii4rnb7uh",
+        "name": "Shahid Buttar for Congress",
+        "prefix": "SHAH",
+        "x-auth-client": "ctvxlgmuhc2ws0jjpsluiewu9we9j85",
+        "x-auth-token": "p2zp3blh4w3nazto6y120wk5bzr9zo5"
+    },
+    "3lj7cgfgi2": {
+        "hash": "3lj7cgfgi2",
+        "name": "Sharice for Congress",
+        "prefix": "SHAR",
+        "x-auth-client": "6l2ssfk1sglabhbzkfvihfp0rygahbh",
+        "x-auth-token": "nwr6ikwrkxkynwz0fgszl3hm233e6lm"
+    },
+    "gcwuesdtwq": {
+        "hash": "gcwuesdtwq",
+        "name": "Sima for Texas",
+        "prefix": "SIMA",
+        "x-auth-client": "r5iovkspyhmvhxhmycjn1kne49c33iw",
+        "x-auth-token": "ffhyzbyk324sqhmm16bd8zjmv2ilgwu"
+    },
+    "jgiw9bakya": {
+        "hash": "jgiw9bakya",
+        "name": "South Carolina Democratic Party",
+        "prefix": "SCDP",
+        "x-auth-client": "3ab9fmg1fwvof40won7jo3p3vk7zle4",
+        "x-auth-token": "oa0tadrnwg1eunmlui2bvod0rks3lmm"
+    },
+    "kis69q8164": {
+        "hash": "kis69q8164",
+        "name": "Steve Bullock for Senate",
+        "prefix": "STEV",
+        "x-auth-client": "ne3ww6fk673cu41rrz5q98ko2zsvdb0",
+        "x-auth-token": "6l0qz2y2zz1uryi2apf601u4it3c72a"
+    },
+    "3rv8bz6bxs": {
+        "hash": "3rv8bz6bxs",
+        "name": "Supermajority",
+        "prefix": "SUMA",
+        "x-auth-client": "1ms66r18u370teaaq1b69qujv3a70ma",
+        "x-auth-token": "cf37hrru6jbqc2ueeec65oztbqjxau7"
+    },
+    "6gwe8t48p1": {
+        "hash": "6gwe8t48p1",
+        "name": "Swamp Turtle",
+        "prefix": "SWAM",
+        "x-auth-client": "3q5nwj0z1isi5vxogncglcqkixmfxwx",
+        "x-auth-token": "n8y4yel26ybe5slxxyh20msb57u0rip"
+    },
+    "oum5xvwhlh": {
+        "hash": "oum5xvwhlh",
+        "name": "Team Joe Store",
+        "prefix": "JOEB",
+        "x-auth-client": "3q5nwj0z1isi5vxogncglcqkixmfxwx",
+        "x-auth-token": "30412xgfp0ic31g8rcinimkkzcr1et6"
+    },
+    "paixa8h05i": {
+        "hash": "paixa8h05i",
+        "name": "Ted for Dekalb",
+        "prefix": "TERR",
+        "x-auth-client": "tthh2qpbp5esnp5q3dz4gbld0yapkor",
+        "x-auth-token": "8n3drpp7ju5ivwh1sbg1rtueaapo24"
+    },
+    "6dd91yrck3": {
+        "hash": "6dd91yrck3",
+        "name": "Texas Blue Action Democrats",
+        "prefix": "TBAD",
+        "x-auth-client": "9fqy46gbpba3utr2op1y17wqul7jeio",
+        "x-auth-token": "61z1m01chae1a1u5354vj04tbdef010"
+    },
+    "13em1": {
+        "hash": "13em1",
+        "name": "Texas Democrats",
+        "prefix": "",
+        "x-auth-client": "kznarse7ot5y1a0bkqzqdm5bdft96a0",
+        "x-auth-token": "6g3mowmwpamiz3v1ubpi8wh9uomcyz3",
+        "logo": "https://store-13em1.mybigcommerce.com/product_images/uploaded_images/texas-democrats-webstore2.png"
+    },
+    "x7fhy29uwu": {
+        "hash": "x7fhy29uwu",
+        "name": "Tina Smith for Minnesota",
+        "prefix": "",
+        "x-auth-client": "fys3tjxe9m1g1q4mdffv8nl7c4n65l6",
+        "x-auth-token": "b4h14red1fmiqn74940aqgz9ly4c818"
+    },
+    "8oblnlr43z": {
+        "hash": "8oblnlr43z",
+        "name": "Tracy Mitrano for Congress",
+        "prefix": "MITR",
+        "x-auth-client": "d030odp9optq662ew4vmwkyzxv46va9",
+        "x-auth-token": "cvpqgltp3zj7osvgf30z3d99mhd3mwl"
+    },
+    "kvhku3lipi": {
+        "hash": "kvhku3lipi",
+        "name": "Utah Democratic Party",
+        "prefix": "UTDP",
+        "x-auth-client": "9mkkr26hhc3nthct0o1pc05vpv2dnba",
+        "x-auth-token": "szajoy0eez278jmmq9sjd2p0j3p80bs"
+    },
+    "4ucnh7qrw9": {
+        "hash": "4ucnh7qrw9",
+        "name": "Vermont Democratic Party",
+        "prefix": "VTDP",
+        "x-auth-client": "mbrunavh85qz3yzs6ph3si7nm2905pp",
+        "x-auth-token": "6clkx7vyvbozkbeuina8i1lwhi78i8o"
+    },
+    "tj1sk8a0az": {
+        "hash": "tj1sk8a0az",
+        "name": "Vote for Every Democrat",
+        "prefix": "VODE",
+        "x-auth-client": "bewnju8444zuem27h34w0veiu0jo11s",
+        "x-auth-token": "ak7eld1s3rdvxp4h63zzbbi4ustarnk"
+    },
+    "x8fyvb7yza": {
+        "hash": "x8fyvb7yza",
+        "name": "Voto Latino",
+        "prefix": "VOTO",
+        "x-auth-client": "c86glkgug2kcb9w2b9ugv4d1necj8gy",
+        "x-auth-token": "921lp5mzj9l98c94nsnvdq4yw8liyag"
+    },
+    "9stbovzr7h": {
+        "hash": "9stbovzr7h",
+        "name": "Washington State Democrats",
+        "prefix": "WAD",
+        "x-auth-client": "w8zt17y77kgtzjh2tqm0dwd1pdx4ee",
+        "x-auth-token": "ogbbkru6y80vckie9mkzkgw1yed6uj0"
+    },
+    "xyc2v1aocy": {
+        "hash": "xyc2v1aocy",
+        "name": "Wendy Davis for Congress",
+        "prefix": "WEND",
+        "x-auth-client": "98g7f5upl070f91iquoej3nuwt9wryd",
+        "x-auth-token": "f6lp1lkpzw0wv2pb1da4egnqn5x54g5"
+    },
+    "us93bkynpa": {
+        "hash": "us93bkynpa",
+        "name": "Wyoming Democratic Party",
+        "prefix": "WYDP",
+        "x-auth-client": "6em4yfjcsvo7sydyogc3x9yvwrowfd7",
+        "x-auth-token": "hem2yz9pjrkathtaep8o56rt2oe588x"
+    },
+    "mzcbmyqmmr": {
+        "hash": "mzcbmyqmmr",
+        "name": "Yinka Faleti for Congress",
+        "prefix": "FALE",
+        "x-auth-client": "cpe1uuq4eqc5tefh20tw4udxiv5o9wu",
+        "x-auth-token": "kgpqqv9mhqmez6cjqrobqpiojtk884e"
+    }
+}

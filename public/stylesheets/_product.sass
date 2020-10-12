@@ -1,0 +1,223 @@
+@import 'category'
+@import 'description'
+@import 'modifier'
+@import 'option'
+@import 'variant'
+
+.product-sidebar-wrapper
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 2rem;
+
+  .product-sidebar-label
+    text-align: center;
+
+  .product-sidebar-item,
+    color: $secondary-text;
+    font-family: $primary-font;
+    text-align: center;
+
+  .num-span
+    color: $light-text;
+    font-family: $primary-font;
+    text-align: center;
+
+  .product-sidebar-item-wrapper
+    align-items: center;
+    background-color: $body-bg;
+    border: 2px solid $product-bg;
+    border-radius: 5px;
+    color: $light-text;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: .1rem;
+
+  a
+    background-color: $product-bg;
+    border-color: $light-text;
+    margin-top: 0;
+    text-transform: uppercase;
+
+.product-info-add-button,
+.product-info-add-image
+  align-items: center;
+  display: flex;
+  height: 1.5rem;
+  justify-content: center;
+
+  form
+    display: flex;
+    align-items: center;
+
+  button
+    border: none;
+    border-radius: 10px;
+    color: $light-text;
+    font-family: $secondary-font;
+    margin: .5rem;
+    padding: .33rem !important;
+    width: 5%;
+
+  label
+    color: $light-text;
+    font-family: $secondary-font;
+    font-size: 13px;
+    margin-left: .5rem;
+
+  #add-image-button
+    background-color: $edit-bg;
+
+  #upload-image-button
+    background-color: $submit-bg;
+    font-size: 13px;
+    margin-left: .5rem;
+    width: 10%;
+
+.product-info-add-button
+  margin-left: unset;
+
+.product-info-container
+  align-items: center;
+  background-color: $product-bg;
+  border: 4px solid $product-bg;
+  border-radius: 15px;
+  color: $light-text;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 1rem auto .5rem auto;
+  width: max-content;
+
+.sample
+  background-color: $sample-bg;
+  border-color: $sample-bg;
+
+.preorder
+  background-color: $preorder-bg;
+  border-color: $preorder-bg;
+
+.template
+  background-color: $template-bg;
+  border-color: $template-bg;
+
+.product-info-input-wrapper,
+.product-info-item-wrapper
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  margin: auto;
+
+  #product-info-name,
+  #product-info-sku
+    border: 2px solid transparent;
+    color: $light-text;
+    display: inline-block;
+    font-family: $primary-font;
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin: .25rem auto;
+    text-align: center;
+
+  .product-info-input
+    background-color: $white-bg;
+    border: 2px solid $edit-bg;
+    border-radius: 10px;
+    color: $dark-text;
+    font-family: $primary-font;
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin: .19rem auto;
+    text-align: center;
+    width: 100%;
+
+  .product-info-price
+    border: 2px solid transparent;
+
+  .product-info-price,
+  .product-price-input
+    color: $light-text;
+    font-family: $secondary-font;
+    font-size: 2.5rem;
+    font-weight: normal;
+    margin: unset;
+
+  .product-price-input
+    color: $dark-text;
+    font-size: 2.5rem;
+    padding: 0px;
+    width: 25%;
+
+  #product-availability
+    align-items: center;
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+  #release-date
+    border: 2px solid transparent;
+    color: $light-text;
+    font-size: 1.5rem;
+    padding: 1px 0px;
+
+  #release-date-input
+    color: $dark-text;
+    font-size: 1.5rem;
+    padding:  1px 0px 0px 0px;
+
+  .product-info-item
+    font-family: $secondary-font;
+    font-size: 1rem;
+    font-weight: normal;
+    margin: .25rem;
+    text-align: center;
+
+.product-info-image-wrapper
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 1rem;
+  margin: auto;
+  width: auto;
+
+  .product-info-image
+    border-radius: 0px;
+    margin: 0 0;
+
+  img:first-child
+    border-radius: 10px 0px 0px 10px;
+
+  img:last-child
+      border-radius: 0px 10px 10px 0px;
+
+.product-message
+    left: 30%;
+    position: absolute;
+    right: 30%;
+    width: 40%;
+
+#new-product-submit
+  //  justify-content: flex-end;
+
+  .new-product-submit-button
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 62%;
+
+  .message
+    width: 38%;
+
+    .message-content
+      margin: unset;
+
+  #submit-product-details
+    margin-left: unset !important;
+    margin-right: unset !important;
+    width: 38% !important;

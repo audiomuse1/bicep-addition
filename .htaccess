@@ -1,0 +1,41 @@
+PassengerFriendlyErrorPages on
+PassengerNodejs /home/bac_bicep/.nvm/versions/node/v10.16.3/bin/node
+
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+<IfModule mod_headers.c>
+    Header set Connection keep-alive
+</IfModule>
+
+<IfModule mod_expires.c>
+    ExpiresActive On
+
+    # Images
+    ExpiresByType image/jpg "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/webp "access plus 1 month"
+    ExpiresByType image/svg+xml "access plus 1 month"
+    ExpiresByType image/x-icon "access plus 1 month"
+
+    # CSS, JavaScript
+    ExpiresByType text/css "access plus 1 week"
+    ExpiresByType text/javascript "access plus 1 day"
+    ExpiresByType application/javascript "access plus 1 day"
+
+    # Fonts
+    ExpiresByType application/x-font-opentype "access plus 1 year"
+    ExpiresByType application/x-font-ttf "access plus 1 year"
+</IfModule>
+
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/javascript
+AddOutputFilterByType DEFLATE text/xml
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE application/x-font-opentype
+AddOutputFilterByType DEFLATE application/x-font-ttf
+AddOutputFilterByType DEFLATE application/x-javascript

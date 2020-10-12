@@ -1,0 +1,72 @@
+.modifier-wrapper
+  align-items: flex-start;
+  background-color: $body-bg;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  .modifier-item
+    background-color: $light-text;
+    border: 2px solid $option-border;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    font-family: $secondary-font;
+    justify-content: space-around;
+    margin: .25rem auto;
+    padding: .5rem;
+    text-align: center
+    width: 100%;
+
+    .modifier-value-wrapper
+      align-items: baseline;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      text-align: center;
+      width: 100%;
+
+      .modifier-delete
+        align-items: center;
+        background-color: transparent;
+        border: 2px solid $submit-bg;
+        color: $submit-bg;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        right: 2.5%;
+        transition: .1s ease all;
+        width: unset;
+
+        &:hover
+          background-color: $submit-bg;
+          color: $light-text;
+
+        .vertical-text
+          padding: .25rem;
+          writing-mode: vertical-rl;
+          text-orientation: upright;
+
+    .option-heading
+      color: $secondary-text;
+      font-family: $primary-font;
+      font-weight: bold;
+      margin: 1rem auto 0rem auto;
+      text-align: center;
+      text-transform: uppercase;
+
+    .value-wrapper
+      align-items: center;
+      color: $dark-text;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      text-align: center;
+
+      .input-item,
+      .product-value
+        color: $dark-text;
+        height: 25px;
+        margin: .25rem !important;

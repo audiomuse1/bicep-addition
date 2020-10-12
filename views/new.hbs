@@ -1,0 +1,184 @@
+<div class="store-heading-link">
+    <a class="store-heading" href="/store/{{selected.hash}}">
+        {{selected.name}}
+    </a>
+</div>
+
+<div class="product-sidebar-wrapper">
+    <a
+        class="product-sidebar-item edit-link"
+        href="https://{{store.domain}}/manage/products/{{template.id}}/edit"
+        target="_blank"
+    >
+        Template Page
+    </a>
+</div>
+
+<div class="product-info-container">
+
+    <div class="product-info-image-wrapper">
+        {{#if image.0.url_thumbnail}}
+            <img class="product-info-image" id="thumbnail-1" src="{{image.0.url_thumbnail}}">
+            {{#if image.1.url_thumbnail}}
+                <img class="product-info-image" id="thumbnail-2" src="{{image.1.url_thumbnail}}">
+            {{else}}
+                <img class="product-info-image" id="thumbnail-2" src="/images/no-image.png">
+            {{/if}}
+        {{else}}
+            <img class="product-info-image" id="thumbnail-1" src="/images/no-image.png">
+            <img class="product-info-image" id="thumbnail-2" src="/images/no-image.png">
+        {{/if}}
+    </div>
+
+</div>
+
+<div class="product-info-item-wrapper">
+    <input
+        class="product-info-input"
+        id="name-input"
+        oninput="setNewDetails({{tmpObject}});"
+        value="{{template.name}}"
+        type="text"
+    >
+    <input
+        class="product-info-input"
+        id="sku-input"
+        oninput="setNewDetails({{tmpObject}});"
+        value="{{template.sku}}"
+        type="text"
+    >
+    <input
+        class="product-price-input"
+        id="price-input"
+        oninput="setNewDetails({{tmpObject}});"
+        value="{{template.price}}"
+        type="text"
+    >
+</div>
+
+<div class="option-section-wrapper">
+    <h2 class="option-section">DESCRIPTION</h2>
+    <div class="product-description">
+        {{{template.description}}}
+        <textarea
+            id="description-input"
+            oninput="setNewDetails({{tmpObject}})"
+            spellcheck="true"
+        >
+            {{{template.description}}}
+        </textarea>
+    </div>
+</div>
+
+{{#if variants}}
+    <div class="option-section-wrapper">
+        <h2 class="option-section">VARIANTS</h2>
+    </div>
+
+    <div class="variant-wrapper">
+        {{#each variants}}
+            {{#if option_values}}
+                <div class="variant-item two-column">
+                    <div class="variant-detail-wrapper new" id="variant-input-wrapper-{{id}}">
+                        <div class="variant-detail-wrapper-item">
+                            <label for="price">Variant Price</label>
+                            <input
+                                class="variant-input"
+                                id="variant-price-input-{{@index}}"
+                                name="price"
+                                oninput="setNewDetails({{../tmpObject}})"
+                                value={{calculated_price}}
+                            >
+                        </div>
+                        <div class="variant-detail-wrapper-item">
+                            <label for="sku">Variant SKU</label>
+                            <input
+                                class="variant-sku-input"
+                                id="new-sku-{{@index}}"
+                                name="sku"
+                                oninput="setNewDetails({{../tmpObject}});"
+                                type="text"
+                                value={{sku}}
+                            >
+                        </div>
+                        <div class="variant-detail-wrapper-item">
+                            <label for="disabled">Disabled</label>
+                            <select
+                                class="variant-input"
+                                id="variant-disabled-input-{{@index}}"
+                                name="disabled"
+                                oninput="setNewDetails({{../tmpObject}})"
+                                value={{purchasing_disabled}}
+                            >
+                                <option value="false" selected> false </option>
+                                <option value="true"> true </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="option-value-wrapper">
+                        {{#each option_values}}
+                            <div class="option-value" id="option-{{../id}}-{{id}}">
+                                <p class="option-value-property">{{option_display_name}}</p>
+                                <p class="option-value-property">{{label}}</p>
+                            </div>
+                        {{/each}}
+                    </div>
+                </div>
+            {{/if}}
+        {{/each}}
+    </div>
+{{/if}}
+
+<div class="option-section-wrapper">
+    <h2 class="option-section">MODIFIERS</h2>
+</div>
+
+{{#if modifiers}}
+    <div class="modifier-wrapper">
+        {{#each modifiers}}
+            <div class="modifier-item">
+                <div class="modifier-value-wrapper">
+                    <div class="value-wrapper">
+                        <span class="product-value">Name: {{display_name}}</span>
+                        <span class="product-value">Type: {{type}}</span>
+                        <span class="product-value">Required: {{required}}</span>
+                    </div>
+                </div>
+                <p class="option-heading">Modifier Sub-Options</p>
+                <div class="option-label-wrapper">
+                    <p class="option-label">Name</p>
+                    <p class="option-label">Default</p>
+                </div>
+                <div class="option-value-wrapper">
+                    {{#each option_values}}
+                        <div class="option-property-wrapper" id="option-{{../id}}-{{id}}">
+                            <span class="option-value-property">{{label}}</span>
+                            <span class="option-value-property">{{is_default}}</span>
+                        </div>
+                    {{/each}}
+                </div>
+            </div>
+        {{/each}}
+    </div>
+{{/if}}
+
+<div class="option-value-wrapper" id="new-product-submit">
+    <div class="new-product-submit-button">
+        <button
+            class="submit-product"
+            id="submit-product-details"
+            onclick="postNewProduct();"
+        >
+            Create This Product
+        </button>
+    </div>
+    <div class="message">
+        <span class="message-content" id="new-product-message" style="display:none;">
+            Creating product...
+        </span>
+    </div>
+</div>
+
+<script src="/javascript/new-color.js"><{{!}}/script>
+<script src="/javascript/new-details.js"><{{!}}/script>
+<script src="/javascript/new-post.js"><{{!}}/script>

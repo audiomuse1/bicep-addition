@@ -1,0 +1,43 @@
+<div class="create-login-wrapper">
+    <form
+        class="create-login-form"
+        action="/create"
+        autocomplete="off"
+        method="POST"
+    >
+        <input
+            class="create-login-input"
+            id="create-email"
+            type="text"
+            name="email"
+            placeholder="Email"
+            autofocus
+            required
+        >
+        <input
+            class="create-login-input"
+            type="text"
+            name="user"
+            placeholder="Username"
+            required
+        >
+        <input
+            class="create-login-input"
+            type="password"
+            name="password"
+            placeholder="Password"
+            required
+        >
+        <input
+            class="create-login-input submit"
+            type="submit"
+            value="Create Account"
+        >
+    </form>
+</div>
+
+<div class="message">
+    <span class="message-content">
+        {{message}}
+    </span>
+</div>

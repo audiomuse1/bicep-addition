@@ -1,0 +1,95 @@
+.index-heading
+  color: $primary-text;
+  font-family: $primary-font;
+  font-weight: normal;
+  font-size: 2.5rem;
+  letter-spacing: 5px;
+  text-align: center;
+  text-transform: uppercase;
+
+.index-info-wrapper
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 2rem;
+
+  a
+    background-color: $body-bg;
+    border: 2px solid $light-text;
+    color: $light-text;
+    cursor: default;
+    font-family: $primary-font;
+    margin-top: unset;
+
+  .index-total-stores
+    color: $primary-text;
+    font-family: $primary-font;
+    text-align: center;
+
+    .num-span
+      color: $light-text;
+      font-family: $primary-font;
+      text-align: center;
+
+.store-container
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  width: 90%;
+
+  .store-item
+    align-items: center;
+    background-color: $store-bg;
+    border-radius: 25px;
+    color: $light-text;
+    display: flex;
+    font-family: $secondary-font;
+    flex-direction: column;
+    height: 9.5rem;
+    justify-content: flex-start;
+    margin: .1rem;
+    padding: 1rem;
+    text-decoration: none;
+    transition: .1s ease all;
+    width: 31%;
+
+    .store-item-name
+      font-size: 1.25rem;
+      margin: .25rem auto .75rem auto;
+
+    .store-item-logo
+      border-radius: 5px;
+      max-height: 75%;
+      max-width: 75%;
+
+    &:hover
+      background-color: $hover-bg;
+      box-shadow: inset 0px 0px 75px $body-bg;
+      color: $primary-text;
+
+      .store-item-name
+        text-shadow: .5px .5px 1px $light-text;
+
+  .maintenance
+    background-color: $body-bg;
+    color: $light-text;
+
+    &:hover
+      background-color: $body-bg;
+      box-shadow: none;
+
+      .store-item-name
+        text-shadow: none;
+
+  .prelaunch
+    background: linear-gradient(0deg, rgba(60,65,77,.5), rgba(21,29,34,1));
+
+    &:hover
+      background: linear-gradient(0deg, rgba(60,65,77,.5), rgba(21,29,34,1));
+      box-shadow: inset 0px 0px 10px $primary-text;
+
+      .store-item-name
+        text-shadow: none;

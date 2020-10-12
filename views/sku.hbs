@@ -1,0 +1,26 @@
+<div class="login-wrapper">
+    <input
+        class="login-input"
+        id="sku-search-input"
+        onkeydown="keySubmit();"
+        placeholder="Enter a SKU"
+        type="text"
+        autofocus
+        required
+    >
+    <button class="submit-product" onclick="skuSearch();">Search</button>
+</div>
+
+<div class="message" id="search-dialog" style="display:none;">
+    <span class="message-content" id="search-dialog-message">
+        Searching...
+    </span>
+</div>
+
+<div class="message" id="result-dialog">
+    <span class="message-content" id="result-dialog-message">
+        {{message}}
+    </span>
+</div>
+
+<script src="/javascript/sku.js"><{{!}}/script>

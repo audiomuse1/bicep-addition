@@ -1,0 +1,30 @@
+<h2 class="index-heading">PICK A STORE</h2>
+
+<div class="index-info-wrapper">
+    <a
+        class="edit-link"
+        href="/sku"
+    >
+        SEARCH BY SKU
+    </a>
+    
+    <span class="index-total-stores">
+        Stores:
+        <span class="num-span">
+            {{count}}
+        </span>
+    </span>
+</div>
+
+<div class="store-container">
+    {{#each stores}}
+        <a
+            class="store-item {{status}}"
+            id="store-{{hash}}"
+            href="store/{{hash}}"
+        >
+            <h2 class="store-item-name">{{name}}</h2>
+            <img rel="prerender" class="store-item-logo" src="{{logo}}">
+        </a>
+    {{/each}}
+</div>

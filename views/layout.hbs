@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {{#if product.sku}}
+            <title>BICEP {{product.sku}}</title>
+        {{else if selected}}
+            <title>BICEP {{selected.prefix}}</title>
+        {{else}}
+            <title>BICEP</title>
+        {{/if}}
+        <link rel="stylesheet" href="/stylesheets/style.css">
+    </head>
+    <body>
+        <header class="header">
+            <div class="header-wrapper">
+                <h4 class="header-space">
+                </h4>
+                <a class="header-link" href="/">
+                    <img class="main-logo" src="/images/bicep.png">
+                    <h1 class="main-heading">BICEP</h1>
+                </a>
+                <div class="header-space">
+                {{#if activeUser}}
+                    <h4 class="active-user">{{activeUser}}</h4>
+                {{else}}
+                    <a class="active-user" href="/create">
+                        Sign Up
+                    </a>
+                {{/if}}
+                </div>
+            </div>
+        </header>
+        {{{body}}}
+    </body>
+</html>

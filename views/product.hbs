@@ -1,0 +1,717 @@
+<div class="store-heading-link">
+    <a class="store-heading" href="/store/{{selected.hash}}">
+        {{selected.name}}
+    </a>
+</div>
+
+<div class="product-sidebar-wrapper">
+    <a
+        class="product-sidebar-item edit-link"
+        href="https://{{store.domain}}/manage/products/{{product.id}}/edit"
+        target="_blank"
+    >
+        Product Page
+    </a>
+    <span class="product-sidebar-item">
+        <span class="product-sidebar-label">Created:</span>
+        <div class="product-sidebar-item-wrapper">
+            <span class="num-span" id="date-created">{{created}}</span>
+        </div>
+    </span>
+    <span class="product-sidebar-item">
+        <span class="product-sidebar-label">Availability:</span>
+        <div class="product-sidebar-item-wrapper">
+            <span id="product-availability">{{product.availability}}</span>
+        </div>
+    </span>
+    <span class="product-sidebar-item">
+        <span class="product-sidebar-label">Viewed:</span>
+        <span class="num-span">
+            {{product.view_count}}
+        </span>
+    </span>
+    <span class="product-sidebar-item">
+        <span class="product-sidebar-label">Sold:</span>
+        <span class="num-span">
+            {{product.total_sold}}
+        </span>
+    </span>
+</div>
+
+<div class="product-info-add-button" id="add-image-button">
+    <button id="add-image-button" onclick="toggleImageInput();">
+        Add Image
+    </button>
+</div>
+
+<div class="product-info-add-image" id="image-input" style="display:none;">
+    <form
+        id="add-image-form"
+        action="../{{product.id}}/image"
+        method="POST"
+        enctype="multipart/form-data"
+    >
+        <input
+            id="image-file-input"
+            type="file"
+            accept="image/*"
+            name="image"
+            value="new-image"
+        >
+        <label for="default">Default</label>
+        <input
+            id="image-checkbox"
+            name="default"
+            type="checkbox"
+            value="true"
+        >
+        <input
+            class="submit"
+            id="upload-image-button"
+            type="submit"
+            value="Upload"
+        >
+    </form>
+    <button class="edit-product-small" onclick="toggleImageInput();">
+        Cancel
+    </button>
+</div>
+
+<div class="product-info-container">
+    <div class="product-info-image-wrapper" id="image-display">
+        {{#if extraImages}}
+            {{#each images}}
+                <img class="product-info-image" id="thumbnail-{{id}}" src="{{url_thumbnail}}">
+            {{/each}}
+            {{#each extraImages}}
+                <img class="product-info-image" id="thumbnail-{{id}}" src="{{url_thumbnail}}">
+            {{/each}}
+        {{else}}
+            {{#if images.0.url_thumbnail}}
+                <img class="product-info-image" id="thumbnail-1" src="{{images.0.url_thumbnail}}">
+                {{#if images.1.url_thumbnail}}
+                    <img class="product-info-image" id="thumbnail-2" src="{{images.1.url_thumbnail}}">
+                {{else}}
+                    <img class="product-info-image" id="thumbnail-2" src="/images/no-image.png">
+                {{/if}}
+            {{else}}
+                <img class="product-info-image" id="thumbnail-1" src="/images/no-image.png">
+                <img class="product-info-image" id="thumbnail-2" src="/images/no-image.png">
+            {{/if}}
+        {{/if}}
+    </div>
+</div>
+
+<div class="product-info-item-wrapper">
+    <span id="product-info-name">{{product.name}}</span>
+    <input
+        class="product-info-input"
+        id="name-input"
+        oninput="setDetails();"
+        style="display:none;"
+        value="{{product.name}}"
+        type="text"
+    >
+    <span id="product-info-sku">{{product.sku}}</span>
+    <input
+        class="product-info-input"
+        id="sku-input"
+        oninput="setDetails();"
+        style="display:none;"
+        value="{{product.sku}}"
+        type="text"
+    >
+    <span class="product-info-price" id="product-info-price">
+        ${{product.price}}
+    </span>
+    <input
+        class="product-price-input"
+        id="price-input"
+        oninput="setDetails();"
+        placeholder="{{product.price}}"
+        style="display:none;"
+        type="text"
+    >
+    <div class="product-info-item" id="product-availability">
+        <span id="release-date">{{product.preorder_release_date}}</span>
+        <input
+            class="input-item"
+            id="release-date-input"
+            oninput="setDetails();"
+            value="{{product.preorder_release_date}}"
+            size="25"
+            style="display:none;"
+            type="text"
+        >
+    </div>
+</div>
+
+<div class="option-value-wrapper">
+    <button
+        class="edit-product"
+        id="edit-product-details"
+        onclick="toggleProductInput();"
+    >
+        Edit Product Details
+    </button>
+    <div class="button-wrapper-row" id="product-details-button-row" style="display:none;">
+        <button
+            class="submit-product-small"
+            id="submit-product-details"
+            onclick="pushDetails({{product.id}});"
+        >
+            Save Changes
+        </button>
+        <button
+            class="edit-product-small"
+            id="cancel-product-details"
+            onclick="toggleProductInput();"
+        >
+            Cancel
+        </button>
+    </div>
+</div>
+
+<div class="option-section-wrapper">
+    <h2 class="option-section">DESCRIPTION</h2>
+    <div class="message product-message">
+        <span class="message-content" id="details-message" style="display:none;">
+
+        </span>
+    </div>
+</div>
+
+<div class="option-section-wrapper">
+    <div class="product-description">
+        {{{product.description}}}
+        <textarea
+            id="description-input"
+            oninput="setDescription()"
+            spellcheck="true"
+        >{{{product.description}}}</textarea>
+
+        <button class="submit" onclick="pushDetails({{id}});">
+            Save Description
+        </button>
+    </div>
+</div>
+
+{{#if variants}}
+    <div class="option-section-wrapper">
+        <h2 class="option-section">VARIANTS</h2>
+        <div class="option-section-button-wrapper">
+            <div class="message product-message">
+                <span class="message-content" id="variant-message" style="display:none;">
+
+                </span>
+            </div>
+            <div class="product-info-add-image" id="variant-image-input" style="display:none;">
+                <form
+                    id="add-variant-image-form"
+                    action="./image/variants"
+                    method="POST"
+                    enctype="multipart/form-data"
+                >
+                    <input
+                        id="variant-image-file-input"
+                        type="file"
+                        accept="image/*"
+                        name="variant-image"
+                        value="new-variant-image"
+                    >
+                    <input
+                        id="selected-variants"
+                        type="hidden"
+                        name="selectedVariants"
+                    >
+                    <input
+                        class="submit"
+                        id="upload-variant-image-button"
+                        type="submit"
+                        value="Upload"
+                    >
+                </form>
+            </div>
+            <button class="edit" id="add-variant-image-button" onclick="toggleVariantImageInput();">
+                Add Variant Image
+            </button>
+            <button
+                class="edit edit-product"
+                onclick="window.location.href='options'"
+            >
+                Edit Variant Options
+            </button>
+        </div>
+    </div>
+
+    <div class="variant-wrapper">
+        {{#each variants}}
+            {{#if option_values}}
+                <div class="variant-item two-column">
+                    <div class="variant-detail-wrapper" id="variant-detail-wrapper-{{id}}">
+                        <h3 class="variant-price" id="variant-price-{{id}}">
+                            {{calculated_price}}
+                        </h3>
+                        <input
+                            class="variant-checkbox"
+                            name="variant-checkbox-{{id}}"
+                            oninput="setVariantImage();"
+                            type="checkbox"
+                            style="display:none;"
+                            value={{id}}
+                        >
+                        <h3 class="variant-sku" id="variant-sku-{{id}}">{{sku}}</h3>
+                        <h3 class="variant-disabled" id="variant-disabled-{{id}}">disabled: {{purchasing_disabled}}</h3>
+                    </div>
+                    <div class="variant-detail-wrapper" id="variant-input-wrapper-{{id}}" style="display:none;">
+                        <input
+                            class="variant-input"
+                            id="variant-price-input-{{id}}"
+                            oninput="setVariant({{id}})"
+                            placeholder={{calculated_price}}
+                        >
+                        <input
+                            class="variant-sku-input"
+                            id="new-sku-{{id}}"
+                            oninput="setVariant({{id}});"
+                            type="text"
+                            value={{sku}}
+                        >
+                        <select
+                            class="variant-input"
+                            id="variant-disabled-input-{{id}}"
+                            oninput="setVariant({{id}})"
+                            placeholder={{purchasing_disabled}}
+                        >
+                            <option value=""></option>
+                            <option value="false"> false </option>
+                            <option value="true"> true </option>
+                        </select>
+                    </div>
+                    <button
+                        class="edit-product"
+                        id="edit-sku-{{id}}"
+                        onclick="toggleVariantInput({{id}})"
+                    >
+                        Edit Variant SKU
+                    </button>
+                    <div class="button-wrapper-row" id="button-wrapper-row-{{id}}" style="display:none;">
+                        <button
+                            class="submit-product-small"
+                            id="submit-sku-{{id}}"
+                            onclick="pushVariant({{id}})"
+                        >
+                            Save
+                        </button>
+                        <button
+                            class="edit-product-small"
+                            id="cancel-sku-{{id}}"
+                            onclick="toggleVariantInput({{id}})"
+                        >
+                            Cancel
+                        </button>
+                    </div>
+                    <div class="option-value-wrapper">
+                        <div class="option-value-block">
+                            {{#each option_values}}
+                                <div class="option-value" id="option-{{../id}}-{{id}}">
+                                    <p class="option-value-property">{{option_display_name}}</p>
+                                    <p class="option-value-property">{{label}}</p>
+                                </div>
+                            {{/each}}
+                        </div>
+                        {{#if image_url}}
+                            <img class="variant-image" src="{{image_url}}">
+                        {{else if ../defaultImage}}
+                            <img class="variant-image" src="{{../defaultImage}}">
+                        {{/if}}
+                    </div>
+                </div>
+            {{/if}}
+        {{/each}}
+    </div>
+{{/if}}
+
+<div class="option-section-wrapper">
+    <h2 class="option-section">MODIFIERS</h2>
+    <div class="message product-message">
+        <span class="message-content" id="modifier-message" style="display:none;">
+
+        </span>
+    </div>
+    <button class="edit-product" id="add-{{product.id}}" onclick="toggleNewModifier({{product.id}})">
+        Add Modifier
+    </button>
+</div>
+
+<div class="modifier-wrapper" id="add-modifier-item-{{product.id}}" style="display:none;">
+    <div class="modifier-item">
+        <div class="modifier-value-wrapper">
+            <div class="value-wrapper">
+                <span class="product-value">Name: empty</span>
+                <span class="product-value">Type: empty</span>
+                <span class="product-value">Required: empty</span>
+            </div>
+            <div class="value-wrapper">
+                <div class="input-item">
+                    <input
+                        id="new-mod-name-{{product.id}}"
+                        name="display_name"
+                        type="text"
+                        oninput="setNewModifier({{product.id}});"
+                    >
+                </div>
+                <div class="input-item">
+                    <select
+                        id="new-mod-type-{{product.id}}"
+                        name="type"
+                        oninput="setNewModifier({{product.id}});"
+                    >
+                        <option value=""></option>
+                        <option value="dropdown"> dropdown </option>
+                        <option value="rectangles"> rectangles </option>
+                    </select>
+                </div>
+                <div class="input-item">
+                    <select
+                        id="new-mod-required-{{product.id}}"
+                        name="required"
+                        oninput="setNewModifier({{product.id}});"
+                    >
+                        <option value=""></option>
+                        <option value="false"> false </option>
+                        <option value="true"> true </option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <p class="option-heading">Modifier Sub-Options</p>
+        <div class="option-label-wrapper">
+            <p class="option-label">Name</p>
+            <p class="option-label">Default</p>
+        </div>
+        <div class="option-value-wrapper">
+                <div class="option-property-wrapper">
+                    <div class="option-value-property">
+                        <input
+                            class="option-value-input"
+                            id="new-mod-label-{{product.id}}"
+                            placeholder="{{product.label}}"
+                            oninput="setNewModifier({{product.id}})"
+                            type="text"
+                        >
+                    </div>
+                    <div class="option-value-property">
+                        <select
+                            class="option-value-input"
+                            id="new-mod-default-{{product.id}}"
+                            oninput="setNewModifier({{product.id}})"
+                        >
+                            <option value=""></option>
+                            <option value="false">false</option>
+                            <option value="true">true</option>
+                        </select>
+                    </div>
+                </div>
+                <button class="submit" onclick="createModifier({{product.id}})">
+                    Create Modifier
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+{{#if modifiers}}
+    <div class="modifier-wrapper">
+        {{#each modifiers}}
+            <div class="modifier-item">
+                <div class="modifier-value-wrapper">
+                    <div class="value-wrapper">
+                        <span class="product-value">Name: {{display_name}}</span>
+                        <span class="product-value">Type: {{type}}</span>
+                        <span class="product-value">Required: {{required}}</span>
+                    </div>
+                    <div class="value-wrapper">
+                        <div class="input-item">
+                            <input
+                                id="new-opt-name-{{id}}"
+                                type="text"
+                                name="display_name"
+                                oninput="setModifier({{id}});"
+                            >
+                        </div>
+                        <div class="input-item">
+                            <select
+                                id="new-opt-type-{{id}}"
+                                name="type"
+                                oninput="setModifier({{id}});"
+                            >
+                                <option value=""></option>
+                                <option value="dropdown"> dropdown </option>
+                                <option value="rectangles"> rectangles </option>
+                            </select>
+                        </div>
+                        <div class="input-item">
+                            <select
+                                name="required"
+                                id="new-opt-required-{{id}}"
+                                oninput="setModifier({{id}});"
+                            >
+                                <option value=""></option>
+                                <option value="false"> false </option>
+                                <option value="true"> true </option>
+                            </select>
+                        </div>
+                    </div>
+                    <button
+                        class="modifier-delete submit"
+                        onclick="deleteModifier({{id}})"
+                    >
+                        <span class="vertical-text">DELETE</span>
+                    </button>
+                </div>
+                <button class="submit" onclick="pushModifier({{id}})">
+                    Save Changes
+                </button>
+                <p class="option-heading">Modifier Sub-Options</p>
+                <div class="option-label-wrapper">
+                    <p class="option-label">Name</p>
+                    <p class="option-label">Default</p>
+                </div>
+                <div class="option-value-wrapper">
+                    {{#each option_values}}
+                        <div class="option-property-wrapper" id="option-{{../id}}-{{id}}">
+                            <span class="option-value-property">{{label}}</span>
+                            <span class="option-value-property">{{is_default}}</span>
+                        </div>
+                        <div class="option-property-wrapper" id="input-{{../id}}-{{id}}" style="display:none;">
+                            <div class="option-value-property">
+                                <input
+                                    class="option-value-input"
+                                    id="new-mod-label-{{id}}"
+                                    placeholder="{{label}}"
+                                    oninput="setModifierOption({{id}})"
+                                    type="text"
+                                >
+                            </div>
+                            <div class="option-value-property">
+                                <select
+                                    class="option-value-input"
+                                    id="new-mod-default-{{id}}"
+                                    placeholder="{{is_default}}"
+                                    oninput="setModifierOption({{id}})"
+                                >
+                                    <option value=""></option>
+                                    <option value="false">false</option>
+                                    <option value="true">true</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button
+                            class="edit-product"
+                            id="edit-{{../id}}-{{id}}"
+                            onclick="toggleModifierInput({{../id}}, {{id}})"
+                        >
+                            Edit Modifier Option
+                        </button>
+                        <div class="button-wrapper-row" id="modifier-buttons-{{../id}}-{{id}}" style="display:none;">
+                            <button
+                                class="submit-product-small"
+                                id="submit-{{../id}}-{{id}}"
+                                onclick="pushModifierOption({{../../product.id}}, {{../id}}, {{id}})"
+                            >
+                                Save Changes
+                            </button>
+                            <button
+                                class="edit-product-small"
+                                id="cancel-{{../id}}-{{id}}"
+                                onclick="toggleModifierInput({{../id}}, {{id}})"
+                            >
+                                Cancel
+                            </button>
+                        </div>
+                    {{/each}}
+                </div>
+            </div>
+        {{/each}}
+    </div>
+{{/if}}
+
+<div class="option-section-wrapper" id="category-section-heading">
+    <h2 class="option-section">CATEGORIES</h2>
+    <div class="message product-message">
+        <span class="message-content" id="category-message" style="display:none;">
+
+        </span>
+    </div>
+    <button class="edit-product" id="category-toggle" onclick="toggleCategoryBlock();">
+        Add Category
+    </button>
+</div>
+
+<div class="product-info-category" id="set-category">
+    <p class="option-heading">ASSIGN PRODUCT CATEGORIES</p>
+    <form id="setCategoryForm">
+        <div class="set-category-input-wrapper">
+        {{#each treeCategories}}
+            <div class="category-section parent">
+                <div class="category-input-item">
+                    {{#if is_checked}}
+                        <input
+                            id="set-tree-parent-{{id}}"
+                            name="parent-cat"
+                            type="checkbox"
+                            oninput="setCategoryDetails();"
+                            value={{id}}
+                            checked
+                        >
+                        <label for="set-tree-parent-{{id}}">{{name}}</label>
+                    {{else}}
+                        <input
+                            id="set-tree-parent-{{id}}"
+                            name="parent-cat"
+                            oninput="setCategoryDetails();"
+                            type="checkbox"
+                            value={{id}}
+                        >
+                        <label for="set-tree-parent-{{id}}">{{name}}</label>
+                    {{/if}}
+                    {{#each children}}
+                        <div class="category-input-item child">
+                            {{#if is_checked}}
+                                <input
+                                    id="set-tree-child-{{id}}"
+                                    name="parent-cat"
+                                    oninput="setCategoryDetails();"
+                                    type="checkbox"
+                                    value={{id}}
+                                    checked
+                                >
+                                <label for="set-tree-child-{{id}}">{{name}}</label>
+                            {{else}}
+                                <input
+                                    id="set-tree-child-{{id}}"
+                                    name="parent-cat"
+                                    oninput="setCategoryDetails();"
+                                    type="checkbox"
+                                    value={{id}}
+                                >
+                                <label for="set-tree-child-{{id}}">{{name}}</label>
+                            {{/if}}
+                        {{#if children}}
+                            {{#each children}}
+                                <div class="category-input-item child">
+                                    {{#if is_checked}}
+                                        <input
+                                            id="set-tree-child-{{id}}"
+                                            name="parent-cat"
+                                            oninput="setCategoryDetails();"
+                                            type="checkbox"
+                                            value={{id}}
+                                            checked
+                                        >
+                                        <label for="set-tree-child-{{id}}">{{name}}</label>
+                                    {{else}}
+                                        <input
+                                            id="set-tree-child-{{id}}"
+                                            name="parent-cat"
+                                            oninput="setCategoryDetails();"
+                                            type="checkbox"
+                                            value={{id}}
+                                        >
+                                        <label for="set-tree-child-{{id}}">{{name}}</label>
+                                    {{/if}}
+                                </div>
+                            {{/each}}
+                        {{/if}}
+                        </div>
+                    {{/each}}
+                </div>
+            </div>
+        {{/each}}
+        </div>
+    </form>
+    <button
+        class="submit"
+        id="submit-product-categories"
+        onclick="pushCategoryAssignment({{product.id}});"
+    >
+        Save Changes
+    </button>
+</div>
+
+<div class="product-info-category" id="create-category" style="display:none;">
+    <p class="option-heading">CHOOSE A PARENT CATEGORY (OPTIONAL)</p>
+    <form id="newCategoryForm">
+        <div class="new-category-input-wrapper">
+        {{#each treeCategories}}
+            <div class="category-section parent">
+                <div class="category-input-item">
+                    <input
+                        id="tree-parent-{{id}}"
+                        name="parent-category"
+                        oninput="setNewCategory();"
+                        onclick="limitToOne(event);"
+                        type="checkbox"
+                        value={{id}}
+                    >
+                    <label for="tree-parent-{{id}}">{{name}}</label>
+                    {{#each children}}
+                        <div class="category-input-item child">
+                            <input
+                                id="tree-child-{{id}}"
+                                name="parent-category"
+                                oninput="setNewCategory();"
+                                onclick="limitToOne(event)"
+                                type="checkbox"
+                                value={{id}}
+                            >
+                            <label for="tree-child-{{id}}">{{name}}</label>
+                        {{#if children}}
+                            {{#each children}}
+                                <div class="category-input-item child">
+                                    <input
+                                        id="tree-child-{{id}}"
+                                        name="parent-category"
+                                        oninput="setNewCategory();"
+                                        onclick="limitToOne(event)"
+                                        type="checkbox"
+                                        value={{id}}
+                                    >
+                                    <label for="tree-child-{{id}}">{{name}}</label>
+                                </div>
+                            {{/each}}
+                        {{/if}}
+                        </div>
+                    {{/each}}
+                </div>
+            </div>
+        {{/each}}
+        </div>
+    </form>
+    <p class="option-heading">
+        NAME NEW CATEGORY
+    </p>
+    <div class="input-item">
+        <input
+            id="new-category-name"
+            name="display_name"
+            oninput="setNewCategory();"
+            type="text"
+        >
+        <button
+            class="submit"
+            id="submit-new-category"
+            onclick="pushNewCategory();"
+        >
+            Create Category
+        </button>
+    </div>
+</div>
+
+<script src="/javascript/api.js"><{{!}}/script>
+<script src="/javascript/product-color.js"><{{!}}/script>
+<script src="/javascript/product-details.js"><{{!}}/script>
+<script src="/javascript/product-variants.js"><{{!}}/script>
+<script src="/javascript/product-modifiers.js"><{{!}}/script>
+<script src="/javascript/product-categories.js"><{{!}}/script>
+<script src="/javascript/product-toggles.js"><{{!}}/script>

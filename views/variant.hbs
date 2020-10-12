@@ -1,0 +1,249 @@
+<div class="store-heading-link">
+    <a class="store-heading" href="/store/{{selected.hash}}">
+        {{selected.name}}
+    </a>
+</div>
+
+<div class="product-sidebar-wrapper">
+    <a
+        class="product-sidebar-item edit-link"
+        href="https://{{store.domain}}/manage/products/{{product.id}}/edit"
+        target="_blank"
+    >
+        Product Page
+    </a>
+    <span class="product-sidebar-item">
+        <span class="product-sidebar-label">Created:</span>
+        <div class="product-sidebar-item-wrapper">
+            <span class="num-span" id="date-created">{{created}}</span>
+        </div>
+    </span>
+    <span class="product-sidebar-item">
+        <span class="product-sidebar-label">Availability:</span>
+        <div class="product-sidebar-item-wrapper">
+            <span id="product-availability">{{product.availability}}</span>
+        </div>
+    </span>
+    <span class="product-sidebar-item">
+        <span class="product-sidebar-label">Viewed:</span>
+        <span class="num-span">
+            {{product.view_count}}
+        </span>
+    </span>
+    <span class="product-sidebar-item">
+        <span class="product-sidebar-label">Sold:</span>
+        <span class="num-span">
+            {{product.total_sold}}
+        </span>
+    </span>
+</div>
+
+<div class="product-info-add-button" id="add-image-button">
+    <button id="add-image-button" onclick="toggleImageInput();">
+        Add Image
+    </button>
+</div>
+
+<div class="product-info-add-image" id="image-input" style="display:none;">
+    <form
+        id="add-image-form"
+        action="../{{product.id}}/image"
+        method="POST"
+        enctype="multipart/form-data"
+    >
+        <input
+            id="image-file-input"
+            accept="image/*"
+            name="image"
+            type="file"
+            value="new-image"
+        >
+        <label for="default">Default</label>
+        <input
+            id="image-checkbox"
+            name="default"
+            type="checkbox"
+            value="true"
+        >
+        <input type="submit" class="submit" id="upload-image-button" value="Upload">
+    </form>
+    <button class="edit-product-small" onclick="toggleImageInput();">
+        Cancel
+    </button>
+</div>
+
+<a href="/store/{{selected.hash}}/edit/{{product.id}}/">
+    <div class="product-info-container">
+
+        <div class="product-info-image-wrapper" id="image-display">
+            {{#if extraImages}}
+                <img class="product-info-image" id="thumbnail-1" src="{{images.0.url_thumbnail}}">
+                <img class="product-info-image" id="thumbnail-2" src="{{images.1.url_thumbnail}}">
+                <img class="product-info-image" id="thumbnail-3" src="{{extraImages.0.url_thumbnail}}">
+                {{#if extraImages.1.url_thumbnail}}
+                    <img class="product-info-image" id="thumbnail-4" src="{{extraImages.1.url_thumbnail}}">
+                {{/if}}
+            {{ else }}
+                {{#if images.0.url_thumbnail}}
+                    <img class="product-info-image" id="thumbnail-1" src="{{images.0.url_thumbnail}}">
+                    {{#if images.1.url_thumbnail}}
+                        <img class="product-info-image" id="thumbnail-2" src="{{images.1.url_thumbnail}}">
+                    {{else}}
+                        <img class="product-info-image" id="thumbnail-2" src="/images/no-image.png">
+                    {{/if}}
+                {{else}}
+                    <img class="product-info-image" id="thumbnail-1" src="/images/no-image.png">
+                    <img class="product-info-image" id="thumbnail-2" src="/images/no-image.png">
+                {{/if}}
+            {{/if}}
+        </div>
+
+    </div>
+</a>
+
+<div class="product-info-item-wrapper">
+    <span id="product-info-name">{{product.name}}</span>
+    <input
+        class="product-info-input"
+        id="name-input"
+        oninput="setDetails();"
+        style="display:none;"
+        value="{{product.name}}"
+        type="text"
+    >
+    <span id="product-info-sku">{{product.sku}}</span>
+    <input
+        class="product-info-input"
+        id="sku-input"
+        oninput="setDetails();"
+        style="display:none;"
+        value="{{product.sku}}"
+        type="text"
+    >
+    <span class="product-info-price" id="product-info-price">
+        ${{product.price}}
+    </span>
+    <input
+        class="product-price-input"
+        id="price-input"
+        oninput="setDetails();"
+        placeholder="{{product.price}}"
+        style="display:none;"
+        type="text"
+    >
+    <div class="product-info-item" id="product-availability">
+        <span id="release-date">{{product.preorder_release_date}}</span>
+        <input
+            class="input-item"
+            id="release-date-input"
+            oninput="setDetails();"
+            value="{{product.preorder_release_date}}"
+            size="25"
+            style="display:none;"
+            type="text"
+        >
+    </div>
+</div>
+
+<div class="option-value-wrapper">
+    <button
+        class="edit-product"
+        id="edit-product-details"
+        onclick="toggleProductInput();"
+    >
+        Edit Product Details
+    </button>
+    <div class="button-wrapper-row" id="product-details-button-row" style="display:none;">
+        <button
+            class="submit-product-small"
+            id="submit-product-details"
+            onclick="pushDetails({{product.id}});"
+        >
+            Save Changes
+        </button>
+        <button
+            class="edit-product-small"
+            id="cancel-product-details"
+            onclick="toggleProductInput();"
+        >
+            Cancel
+        </button>
+    </div>
+</div>
+
+<div class="variant-wrapper" id="variant-wrapper">
+    {{#each options}}
+        <h3 class="variant-value-name">{{display_name}}</h3>
+        <div class="variant-label-wrapper">
+            <span class="variant-value-label">Value</span>
+            <span class="variant-value-label">Default</span>
+            <span class="variant-value-label"></span>
+        </div>
+        <div class="variant-item">
+            <div class="option-value-wrapper">
+                <div class="option-value-variant">
+                    {{#each option_values}}
+                        <div class="option-value">
+                            <input
+                                class="variant-value-property"
+                                id="input-{{../id}}-{{id}}"
+                                oninput="setVariantBody({{../id}}, {{id}});"
+                                placeholder="{{label}}"
+                                style="display:none;"
+                                type="text"
+                            >
+                            <p class="variant-value-property" id="option-{{../id}}-{{id}}">
+                                {{label}}
+                            </p>
+                            <p class="variant-value-property" id="default-{{../id}}-{{id}}">
+                                {{is_default}}
+                            </p>
+                            <div class="variant-value-property" id="new-default-{{../id}}-{{id}}" style="display:none;">
+                                <select
+                                    class="variant-value-property"
+                                    id="default-input-{{../id}}-{{id}}"
+                                    placeholder="{{is_default}}"
+                                    oninput="setVariantBody({{../id}}, {{id}})"
+                                >
+                                    <option value=""></option>
+                                    <option value="false">false</option>
+                                    <option value="true">true</option>
+                                </select>
+                            </div>
+                            <button
+                                class="edit-product"
+                                id="edit-{{../id}}-{{id}}"
+                                onclick="toggleVariantValueInput({{../id}}, {{id}})"
+                            >
+                                Edit
+                            </button>
+                            <div class="button-wrapper-row" id="variant-buttons-{{../id}}-{{id}}" style="display:none;">
+                                <button
+                                    class="submit-product-small"
+                                    id="submit-{{../id}}-{{id}}"
+                                    onclick="pushVariantEdit({{../id}}, {{id}})"
+                                >
+                                    Save Changes
+                                </button>
+                                <button
+                                    class="edit-product-small"
+                                    id="cancel-{{../id}}-{{id}}"
+                                    onclick="toggleVariantValueInput({{../id}}, {{id}})"
+                                >
+                                    Cancel
+                                </button>
+                            </div>
+                        </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    {{/each}}
+</div>
+
+<script src="/javascript/api.js"><{{!}}/script>
+<script src="/javascript/product-color.js"><{{!}}/script>
+<script src="/javascript/product-details.js"><{{!}}/script>
+<script src="/javascript/product-toggles.js"><{{!}}/script>
+<script src="/javascript/variant-details.js"><{{!}}/script>
+<script src="/javascript/variant-toggles.js"><{{!}}/script>

@@ -1,0 +1,97 @@
+// General Option Sections
+.option-section-wrapper
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .option-section-button-wrapper
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 80%;
+
+    button
+      margin: auto .25rem;
+
+    #upload-variant-image-button
+      background-color: $submit-bg !important;
+      border: none !important;
+      color: $light-text !important;
+      font-size: 13px !important;
+      margin: 0 .25rem 0 .5rem !important;
+      padding: .33rem 1.5rem;
+
+  button
+    height: 25%;
+    margin: unset;
+    width: 10%;
+
+.option-section
+  color: $light-text;
+  font-family: $primary-font;
+  font-weight: normal;
+
+.option-label-wrapper,
+.option-value-wrapper
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  .option-value-block
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+
+  .option-property-wrapper
+    background-color: $white-bg;
+    border: 2px solid $option-border;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 50px;
+    justify-content: space-around;
+    width: 100%;
+
+  .option-label
+    color: $dark-text;
+    text-align: center;
+    width: 33%;
+
+  .option-input,
+  .option-value
+    align-items: center;
+    background-color: $white-bg;
+    border: 1px solid $input-border;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+
+  .option-value
+    border-color: $option-border;
+
+  .option-value-input,
+  .option-value-property
+    color: $dark-text;
+    margin: auto;
+    padding: 5px 0px;
+    text-align: center;
+    width: 50%;
+
+  .button-wrapper-row
+    justify-content: center;
+    width: 100%;
+
+    button
+      margin-bottom: .5rem;
+      margin-left: 2.5px;
+      margin-right: 2.5px;
+      margin-top: .5rem;

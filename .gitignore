@@ -1,0 +1,14 @@
+/bin/
+/logs/
+/node_modules/
+/tmp/
+/public/uploads/
+/public/.well-known/
+
+
+activity.log
+error.log
+
+.directory
+.tern-port
+

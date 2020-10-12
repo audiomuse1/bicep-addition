@@ -1,0 +1,219 @@
+<h2 class="store-heading">{{selected.name}}</h2>
+
+<div class="store-info-wrapper">
+    <a
+        class="store-total-products edit-link"
+        href="https://{{store.domain}}/manage/dashboard"
+        target="_blank"
+    >
+        Store Dashboard
+    </a>
+    {{#if sort}}
+        <a
+            class="store-total-products edit-link"
+            id="sort-toggle"
+            href="/store/{{selected.hash}}"
+        >
+            Sort By SKU
+        </a>
+    {{else}}
+        <a
+            class="store-total-products edit-link"
+            id="sort-toggle"
+            href="/store/{{selected.hash}}/sort/sold"
+        >
+            Top Sellers {{sort}}
+        </a>
+    {{/if}}
+    <span
+        class="store-total-products"
+    >
+        Products:
+        <span class="num-span">
+            {{ count }}
+        </span>
+    </span>
+</div>
+
+<div class="product-wrapper">
+    {{#each products}}
+        {{#if is_preorder_only}}
+            {{#if this.is_visible}}
+                <div class="product-item preorder">
+            {{else}}
+                <div class="product-item preorder not-visible">
+            {{/if}}
+        {{else}}
+            {{#if this.is_visible}}
+                <div class="product-item">
+            {{else}}
+                <div class="product-item not-visible">
+            {{/if}}
+        {{/if}}
+                <h4>{{sku}}</h4>
+                <h5>{{name}}</h5>
+                <div class="icon-wrapper">
+                    {{#if this.is_visible}}
+                        <a onclick="toggleVisible({{id}}, false);">
+                            <img src"/images/visible.png" src="/images/visible.png">
+                        </a>
+                    {{/if}}
+
+                    {{#unless this.is_visible}}
+                        <a onclick="toggleVisible({{id}}, true);">
+                            <img src="/images/not-visible.png">
+                        </a>
+                    {{/unless}}
+
+                    <div class="product-price-wrapper">
+                        <h3>{{price}}</h3>
+                    </div>
+                    <img class="product-thumbnail" src="{{primary_image.url_tiny}}">
+
+                    {{#if this.is_featured}}
+                        <a onclick="toggleFeatured({{id}}, false);">
+                            <img src="/images/featured.png">
+                        </a>
+                    {{/if}}
+
+                    {{#unless this.is_featured}}
+                        <a onclick="toggleFeatured({{id}}, true);">
+                            <img src="/images/not-featured.png">
+                        </a>
+                    {{/unless}}
+                </div>
+                <div class="link-wrapper">
+                    <a class="edit-link" href="/store/{{../selected.hash}}/edit/{{id}}/">
+                        Edit This Product
+                    </a>
+                    <a class="edit-link" target="blank" href="{{../store.secure_url}}{{custom_url.url}}">
+                        View On Store
+                    </a>
+                </div>
+                {{#if is_preorder_only}}
+                <div class="preorder-wrapper" id="disable-{{id}}">
+                    <h4 class="preorder-date">{{preorder_release_date}}</h4>
+                    <button class="submit" onclick="removePreorder({{id}});">
+                        Disable Preorder
+                    </button>
+                </div>
+                {{else}}
+                <div class="preorder-wrapper" id="enable-{{id}}">
+                    <h4 class="no-preorder-date">{{preorder_release_date}}</h4>
+                    <button class="edit" onclick="togglePreorder({{id}});">
+                        Enable Preorder
+                    </button>
+                </div>
+                <div class="preorder-wrapper" id="submit-{{id}}" style="display:none;">
+                    <div class="input-item" style="width:50%;">
+                        <input type="text" id="preorder-input-{{id}}" oninput="setPreorder({{id}});">
+                    </div>
+                    <button class="submit" id="preorder-submit-{{id}}" onclick="pushPreorder({{id}});">
+                        Save Changes
+                    </button>
+                </div>
+                {{/if}}
+                <span class="product-total-sold">Sold: {{total_sold}}</span>
+            </div>
+    {{/each}}
+
+    {{#each templates}}
+            <div class="product-item template">
+                <h4>{{sku}}</h4>
+                <h5>{{name}}</h5>
+                <div class="icon-wrapper">
+                    {{#if this.is_visible}}
+                        <a onclick="toggleVisible({{id}}, false);">
+                            <img src"/images/visible.png" src="/images/visible.png">
+                        </a>
+                    {{/if}}
+
+                    {{#unless this.is_visible}}
+                        <a onclick="toggleVisible({{id}}, true);">
+                            <img src="/images/not-visible.png">
+                        </a>
+                    {{/unless}}
+
+                    <div class="product-price-wrapper">
+                        <h3>{{price}}</h3>
+                    </div>
+
+                    {{#if this.is_featured}}
+                        <a onclick="toggleFeatured({{id}}, false);">
+                            <img src="/images/featured.png">
+                        </a>
+                    {{/if}}
+
+                    {{#unless this.is_featured}}
+                        <a onclick="toggleFeatured({{id}}, true);">
+                            <img src="/images/not-featured.png">
+                        </a>
+                    {{/unless}}
+                </div>
+                <div class="link-wrapper">
+                    <a class="edit-link" href="/store/{{../selected.hash}}/edit/{{id}}/">
+                        Edit This Product
+                    </a>
+                    <a class="edit-link" href="/store/{{../selected.hash}}/new/{{id}}/">
+                        Copy This Product
+                    </a>
+                </div>
+                <div class="preorder-wrapper" id="enable-{{id}}">
+                    <h4 class="no-preorder-date">{{preorder_release_date}}</h4>
+                    <button class="null-button"></button>
+                </div>
+            </div>
+    {{/each}}
+
+    {{#each samples}}
+            <div class="product-item sample">
+                <h4>{{sku}}</h4>
+                <h5>{{name}}</h5>
+                <div class="icon-wrapper">
+                    {{#if this.is_visible}}
+                        <a onclick="toggleVisible({{id}}, false);">
+                            <img src"/images/visible.png" src="/images/visible.png">
+                        </a>
+                    {{/if}}
+
+                    {{#unless this.is_visible}}
+                        <a onclick="toggleVisible({{id}}, true);">
+                            <img src="/images/not-visible.png">
+                        </a>
+                    {{/unless}}
+
+                    <div class="product-price-wrapper">
+                        <h3>{{price}}</h3>
+                    </div>
+                    <img class="product-thumbnail" src="{{primary_image.url_tiny}}">
+
+                    {{#if this.is_featured}}
+                        <a onclick="toggleFeatured({{id}}, false);">
+                            <img src="/images/featured.png">
+                        </a>
+                    {{/if}}
+
+                    {{#unless this.is_featured}}
+                        <a onclick="toggleFeatured({{id}}, true);">
+                            <img src="/images/not-featured.png">
+                        </a>
+                    {{/unless}}
+                </div>
+                <div class="link-wrapper">
+                    <a class="edit-link" href="/store/{{../selected.hash}}/edit/{{id}}/">
+                        Edit This Product
+                    </a>
+                    <a class="edit-link" target="blank" href="{{../store.secure_url}}{{custom_url.url}}">
+                        View On Store
+                    </a>
+                </div>
+                <div class="preorder-wrapper" id="enable-{{id}}">
+                    <h4 class="no-preorder-date">{{preorder_release_date}}</h4>
+                    <button class="null-button"></button>
+                </div>
+            </div>
+    {{/each}}
+</div>
+
+<script src="/javascript/api.js"><{{!}}/script>
+<script src="/javascript/store.js"><{{!}}/script>

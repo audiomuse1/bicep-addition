@@ -1,0 +1,52 @@
+@import 'colors'
+@import 'fonts'
+
+@import 'buttons'
+@import 'error'
+@import 'header'
+@import 'index'
+@import 'login'
+@import 'product'
+@import 'store'
+
+@import 'laptop'
+@import 'tablet'
+@import 'mobile'
+
+body
+  background-color: $body-bg;
+  padding: 1rem;
+
+a
+  text-decoration: none !important;
+
+input,
+select,
+option
+  background-color: $white-bg !important;
+  border: 2px solid $edit-bg !important;
+  border-radius: 10px !important;
+  color: $dark-text !important;
+  font-family: $secondary-font;
+  font-size: 16px;
+  text-align: center !important;
+
+textarea
+  background-color: $white-bg;
+  border: 2px solid $edit-bg;
+  border-radius: 10px;
+  color: $dark-text;
+
+.message
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+.message-content
+  color: $submit-bg;
+  font-family: $primary-font;
+  margin: .5rem auto;
+  padding: .25rem;
+  text-align: center;
+

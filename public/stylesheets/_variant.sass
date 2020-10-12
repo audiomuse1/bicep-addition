@@ -1,0 +1,162 @@
+#variant-wrapper
+  margin-top: 2rem;
+
+.variant-wrapper
+  align-items: flex-start;
+  background-color: $body-bg;
+  border: none;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  .variant-item
+    border-radius: 15px;
+    margin: .25rem auto;
+
+  .two-column
+    width: 48%;
+
+  .new
+    margin: .5rem auto;
+
+  .variant-detail-wrapper
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+
+    .variant-price,
+    .variant-disabled
+      border: 2px solid transparent;
+      color: $dark-text;
+      margin: 0rem;
+      padding: 1px 0px;
+      width: 15%;
+
+    .variant-checkbox
+      margin: 5px 2px;
+      width: 15%;
+
+    .variant-sku
+      border: 2px solid transparent;
+      color: $dark-text;
+      margin: 0rem auto
+      padding: 1px 0px;
+      width: 33%;
+
+    .variant-input
+      font-size: 1.17em;
+      width: 15%;
+
+      option
+        font-size: 1.17em;
+
+    .variant-sku-input
+      color: $dark-text;
+      font-size: 1.17em;
+      font-weight: bold;
+      margin: 0rem auto;
+      transform: translateX(-2px);
+      width: 33%;
+
+    .variant-detail-wrapper-item
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 33%;
+
+      label
+        font-weight: bold;
+        margin-bottom: .5rem;
+
+      .variant-input
+        font-size: 1.17em;
+        margin: 0rem auto;
+        width: 80%;
+
+        option
+          font-size: 1.17em;
+
+      .variant-sku-input
+        color: $dark-text;
+        font-size: 1.17em;
+        font-weight: bold;
+        margin: 0rem auto;
+        transform: translateX(-2px);
+        width: 80%;
+
+.variant-value-name
+  background-color: $body-bg;
+  color: $light-text;
+  font-family: $primary-font;
+  font-weight: normal;
+  margin: 0;
+  padding: .5rem;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+
+.variant-label-wrapper
+  background-color: $body-bg;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 80vw;
+
+.variant-value-label,
+.variant-value-property
+  color: $dark-text;
+  margin: auto;
+  padding: 5px;
+  text-align: center;
+  width: 25%;
+
+.variant-value-label
+  color: $light-text;
+  font-family: $secondary-font;
+  width: 33%;
+
+.variant-item
+  background-color: $light-text;
+  border: 2px solid $option-border;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  font-family: $secondary-font;
+  justify-content: space-around;
+  padding: .5rem;
+  text-align: center
+  width: 100%;
+
+  .option-value-variant
+    align-items: center;
+    background-color: $option-container;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+
+    .option-value
+      width: 80vw;
+
+      .button-wrapper-row
+        margin: auto;
+        width: 25%;
+
+        button
+          width: 50%;
+
+    input,
+    option,
+    select
+      padding: 4px;
+
+  .variant-image
+    border: 1px solid $product-bg;
+    border-radius: 10px;
+    width: 10%;

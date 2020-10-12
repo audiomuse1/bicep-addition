@@ -1,0 +1,78 @@
+.product-info-category
+  align-items: center;
+  background-color: $option-container;
+  border: 2px solid $product-bg;
+  border-radius: 20px;
+  color: $dark-text;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-family: $secondary-font;
+  font-size: 1rem;
+  font-weight: normal;
+  justify-content: space-evenly;
+  margin: .25rem;
+  padding: 1rem 0;
+  width: 100%;
+
+  #setCategoryForm,
+  #newCategoryForm
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 80%;
+
+    .set-category-input-wrapper,
+    .new-category-input-wrapper
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      width: 100%;
+
+      .category-section
+        align-items: center;
+        display: flex;
+        flex: auto;
+        flex-direction: column;
+        margin: 0 .5rem 1rem .5rem;
+        width: max-content;
+
+        .category-input-item
+          flex-direction: row;
+          height: auto;
+          width: max-content;
+
+        .child
+          padding-left: 1.5rem;
+
+  button
+    height: unset;
+    margin-top: .25rem;
+    width: 25%;
+
+  .option-heading
+    color: $product-bg;
+    font-family: $primary-font;
+    margin-top: unset;
+    text-align: center;
+    width: 100%;
+
+  .parent
+    align-items: center;
+    background-color: $body-bg;
+    border: 2px solid $product-bg;
+    border-radius: 10px;
+    color: $light-text;
+    display: flex !important;
+    padding: 1.5rem;
+
+  .input-item
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+
+    input
+      margin: 0 auto .75rem auto;
+      width: 25%;
